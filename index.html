@@ -650,6 +650,16 @@
                                 <a href="mailto:info.tric@gmail.com" class="text-slate-300 hover:text-[#C5A059] transition-colors">info.tric@gmail.com</a>
                             </div>
                         </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white/10 p-3 rounded-lg">
+                                <i data-lucide="phone" class="w-6 h-6 text-[#C5A059]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg" data-i18n="contact-phone-title">Phone</h4>
+                                <a href="tel:+584122205509" class="text-slate-300 hover:text-[#C5A059] transition-colors">+58 412 220 5509</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -679,21 +689,58 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#383B3E] text-slate-400 py-8 border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex items-center gap-2">
-                <span class="text-2xl font-bold text-white tracking-wider font-montserrat">TRIC, C.A.</span>
+    <footer class="bg-[#1B365D] text-slate-300 py-12 border-t border-[#1B365D]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="col-span-1 md:col-span-2">
+                <a href="#home" class="flex items-center gap-2 mb-4 group active:scale-95 transition-transform duration-150 w-fit">
+                    <span class="text-2xl font-bold text-white tracking-wider font-montserrat group-hover:text-[#C5A059] transition-colors">TRIC, C.A.</span>
+                </a>
+                <p class="text-sm max-w-xs" data-i18n="footer-desc">Energy Solutions for a Country that Needs to Self-Generate. Committed to operational reliability in Venezuela.</p>
             </div>
-            <p class="text-sm text-center md:text-left">
-                &copy; <span id="year"></span> TRIC, C.A. <span data-i18n="footer-rights">All rights reserved.</span>
-            </p>
-            <div class="flex gap-4">
-                <a href="#" class="hover:text-[#C5A059] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                <a href="#" class="hover:text-[#C5A059] transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+           
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider" data-i18n="footer-links-title">Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#about" data-i18n="nav-about" class="hover:text-[#C5A059] transition-colors">About Us</a></li>
+                    <li><a href="#services" data-i18n="nav-services" class="hover:text-[#C5A059] transition-colors">Services</a></li>
+                    <li><a href="#compliance" data-i18n="nav-compliance" class="hover:text-[#C5A059] transition-colors">Compliance</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact" class="hover:text-[#C5A059] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider" data-i18n="footer-legal-title">Legal</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" data-i18n="footer-legal-1" class="hover:text-[#C5A059] transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" data-i18n="footer-legal-2" class="hover:text-[#C5A059] transition-colors">Terms of Use</a></li>
+                </ul>
             </div>
         </div>
+       
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+            <div class="flex flex-col gap-2 text-center md:text-left">
+                <p>&copy; <span id="year"></span> TRIC, C.A. Naguanagua, Carabobo, Venezuela. <span data-i18n="footer-rights">All rights reserved.</span></p>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#C5A059] hover:text-[#1B365D] transition-colors cursor-pointer">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                </a>
+                <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#C5A059] hover:text-[#1B365D] transition-colors cursor-pointer">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/584121371328?text=Hi%2C%20I%20would%20like%20more%20information%20about%20your%20services." id="wa-floating-link" target="_blank" class="fixed bottom-24 right-8 md:bottom-8 md:right-24 p-3 rounded-full shadow-lg z-50 animate-pulse hover:scale-110 transition-transform group">
+        <svg viewBox="0 0 24 24" class="w-12 h-12 fill-[#25D366] drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+    
     <!-- Back to Top Button -->
     <button id="back-to-top" class="fixed bottom-8 right-8 bg-[#C5A059] text-[#1B365D] p-3 rounded-full shadow-lg hover:bg-[#C5A059]/90 transition-all transform hover:-translate-y-1 scroll-hidden z-50">
         <i data-lucide="arrow-up" class="w-6 h-6"></i>
@@ -713,8 +760,8 @@
                 "alliances-title": "Proveedores y Alianzas", "alliances-desc": "Contamos con una <span class=\"font-bold text-[#1B365D]\">red de proveedores internacionales</span> que garantizan equipos confiables y de alta calidad. Además, junto a nuestros aliados locales, tenemos la <span class=\"font-bold text-[#1B365D]\">capacidad de diseño y ensamblaje local</span> en Venezuela, adaptadas a las necesidades específicas de cada cliente.",
                 "compliance-title": "Cumplimiento Legal y Normativo", "compliance-desc": "Garantizamos que todos nuestros proyectos y operaciones cumplen estrictamente con las normativas legales, fiscales y parafiscales vigentes en Venezuela.", "comp-1": "Inscripción en el Registro Nacional de Contratistas (RNC)", "comp-2": "Solvencias Laborales y Tributarias al día", "comp-3": "Cumplimiento de normativas de seguridad industrial (INPSASEL)", "comp-iso-title": "Estándares Internacionales",
                 "policies-title": "Políticas Corporativas", "policies-subtitle": "En TRIC, C.A. operamos bajo los más estrictos estándares de ética, transparencia y cumplimiento normativo.", "pol-1-title": "Cumplimiento OFAC", "pol-1-desc": "Mantenemos un estricto programa de cumplimiento para asegurar que nuestras operaciones no involucren a personas o entidades sancionadas por la Oficina de Control de Activos Extranjeros (OFAC).", "pol-2-title": "Anticorrupción", "pol-2-desc": "Cero tolerancia al soborno y la corrupción. Nos regimos por políticas internas rigurosas y estándares internacionales (ISO 37001) para garantizar la integridad en todos nuestros negocios.", "pol-3-title": "Privacidad de Datos", "pol-3-desc": "Protegemos la información confidencial de nuestros clientes y socios comerciales, implementando medidas de seguridad de la información y respetando las leyes de protección de datos.",
-                "contact-title": "Contáctanos", "contact-subtitle": "¿Listo para asegurar la continuidad operativa de su empresa? Nuestro equipo de ingenieros está preparado para asesorarle.", "contact-address-title": "Ubicación", "contact-address-desc": "Av Valmore Rodriguez, Naguanagua, Carabobo, Venezuela", "contact-email-title": "Correo Electrónico", "contact-form-title": "Envíenos un mensaje", "form-name": "Nombre / Empresa", "form-email": "Correo Electrónico", "form-msg": "Mensaje", "form-btn": "Enviar Mensaje",
-                "footer-rights": "Todos los derechos reservados."
+                "contact-title": "Contáctanos", "contact-subtitle": "¿Listo para asegurar la continuidad operativa de su empresa? Nuestro equipo de ingenieros está preparado para asesorarle.", "contact-address-title": "Ubicación", "contact-address-desc": "Av Valmore Rodriguez, Naguanagua, Carabobo, Venezuela", "contact-email-title": "Correo Electrónico", "contact-phone-title": "Teléfono", "contact-form-title": "Envíenos un mensaje", "form-name": "Nombre / Empresa", "form-email": "Correo Electrónico", "form-msg": "Mensaje", "form-btn": "Enviar Mensaje",
+                "footer-desc": "Soluciones de Energía para un País que Necesita Autogenerar. Comprometidos con la confiabilidad operativa en Venezuela.", "footer-rights": "Todos los derechos reservados.", "footer-links-title": "Enlaces", "footer-legal-title": "Legal", "footer-legal-1": "Política de Privacidad", "footer-legal-2": "Términos de Uso"
             },
             en: {
                 "nav-about": "About Us", "nav-services": "Services", "nav-sectors": "Sectors", "nav-capacities": "Capacities", "nav-compliance": "Compliance", "nav-contact": "Contact",
@@ -727,8 +774,8 @@
                 "alliances-title": "Suppliers and Alliances", "alliances-desc": "We have an <span class=\"font-bold text-[#1B365D]\">international network of suppliers</span> that guarantee reliable and high-quality equipment. In addition, together with our local allies, we have the <span class=\"font-bold text-[#1B365D]\">capacity for local design and assembly</span> in Venezuela, adapted to the specific needs of each client.",
                 "compliance-title": "Legal and Regulatory Compliance", "compliance-desc": "We guarantee that all our projects and operations strictly comply with the legal, fiscal, and parafiscal regulations in force in Venezuela.", "comp-1": "Registration in the National Registry of Contractors (RNC)", "comp-2": "Labor and Tax Solvencies up to date", "comp-3": "Compliance with industrial safety regulations (INPSASEL)", "comp-iso-title": "International Standards",
                 "policies-title": "Corporate Policies", "policies-subtitle": "At TRIC, C.A. we operate under the strictest standards of ethics, transparency, and regulatory compliance.", "pol-1-title": "OFAC Compliance", "pol-1-desc": "We maintain a strict compliance program to ensure our operations do not involve persons or entities sanctioned by the Office of Foreign Assets Control (OFAC).", "pol-2-title": "Anti-Corruption", "pol-2-desc": "Zero tolerance for bribery and corruption. We are governed by rigorous internal policies and international standards (ISO 37001) to guarantee integrity in all our business.", "pol-3-title": "Data Privacy", "pol-3-desc": "We protect the confidential information of our clients and business partners, implementing information security measures and respecting data protection laws.",
-                "contact-title": "Contact Us", "contact-subtitle": "Ready to ensure the operational continuity of your company? Our team of engineers is ready to advise you.", "contact-address-title": "Location", "contact-address-desc": "Av Valmore Rodriguez, Naguanagua, Carabobo, Venezuela", "contact-email-title": "Email", "contact-form-title": "Send us a message", "form-name": "Name / Company", "form-email": "Email", "form-msg": "Message", "form-btn": "Send Message",
-                "footer-rights": "All rights reserved."
+                "contact-title": "Contact Us", "contact-subtitle": "Ready to ensure the operational continuity of your company? Our team of engineers is ready to advise you.", "contact-address-title": "Location", "contact-address-desc": "Av Valmore Rodriguez, Naguanagua, Carabobo, Venezuela", "contact-email-title": "Email", "contact-phone-title": "Phone", "contact-form-title": "Send us a message", "form-name": "Name / Company", "form-email": "Email", "form-msg": "Message", "form-btn": "Send Message",
+                "footer-desc": "Energy Solutions for a Country that Needs to Self-Generate. Committed to operational reliability in Venezuela.", "footer-rights": "All rights reserved.", "footer-links-title": "Links", "footer-legal-title": "Legal", "footer-legal-1": "Privacy Policy", "footer-legal-2": "Terms of Use"
             }
         };
 
@@ -770,6 +817,16 @@
             if (desktopLangDropdown) {
                 desktopLangDropdown.classList.add('hidden');
                 desktopLangDropdown.classList.remove('flex');
+            }
+
+            const waMessages = {
+                es: "Hola, quisiera más información sobre sus servicios.",
+                en: "Hi, I would like more information about your services."
+            };
+            
+            const waUrl = `https://wa.me/584121371328?text=${encodeURIComponent(waMessages[lang])}`;
+            if (document.getElementById('wa-floating-link')) {
+                document.getElementById('wa-floating-link').href = waUrl;
             }
         }
         
