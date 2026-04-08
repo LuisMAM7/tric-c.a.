@@ -111,7 +111,7 @@
 <body class="bg-slate-50 text-slate-800">
 
     <!-- Navigation -->
-    <nav class="fixed w-full bg-[#204788]/95 backdrop-blur-sm z-50 border-b border-[#204788]">
+    <nav class="fixed w-full bg-[#1B365D]/95 backdrop-blur-sm z-50 border-b border-[#1B365D]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 
@@ -122,12 +122,30 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-1">
-                    <a href="#about" data-i18n="nav-about" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Quiénes Somos</a>
-                    <a href="#services" data-i18n="nav-services" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Servicios</a>
-                    <a href="#sectors" data-i18n="nav-sectors" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Sectores</a>
-                    <a href="#compliance" data-i18n="nav-compliance" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Cumplimiento</a>
+                    <a href="#about" data-i18n="nav-about" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#C5A059] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Quiénes Somos</a>
+                    <a href="#services" data-i18n="nav-services" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#C5A059] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Servicios</a>
+                    <a href="#sectors" data-i18n="nav-sectors" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#C5A059] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Sectores</a>
+                    <a href="#compliance" data-i18n="nav-compliance" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#C5A059] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Cumplimiento</a>
                     
-                    <a href="#contact" data-i18n="nav-contact" class="bg-[#39D87E] text-[#204788] px-5 py-2 rounded-md font-bold uppercase tracking-wider hover:bg-[#39D87E]/90 transition-all ml-2">Contacto</a>
+                    <a href="#contact" data-i18n="nav-contact" class="bg-[#C5A059] text-[#1B365D] px-5 py-2 rounded-md font-bold uppercase tracking-wider hover:bg-[#C5A059]/90 transition-all ml-2">Contacto</a>
+
+                    <!-- Desktop Language Switcher -->
+                    <div class="relative ml-4" id="desktop-lang-switcher">
+                        <button id="desktop-lang-btn" class="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-2 rounded-md transition-all border border-[#C5A059]/30 focus:outline-none focus:ring-2 focus:ring-[#C5A059]">
+                            <img src="https://lh3.googleusercontent.com/d/1FrPrn4T4fwNLxdYHw2ifWaHzoJQ200yk" id="desktop-current-flag-img" class="w-5 h-5 rounded-full object-cover shadow-sm" alt="ES">
+                            <span id="desktop-current-lang" class="font-bold text-sm">ES</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-[#C5A059] transition-transform duration-200" id="desktop-lang-chevron"></i>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div id="desktop-lang-dropdown" class="absolute right-0 mt-2 w-36 bg-[#1B365D] border border-[#C5A059]/30 rounded-md shadow-xl hidden flex-col overflow-hidden z-50">
+                            <button class="lang-option flex items-center gap-3 px-4 py-3 hover:bg-[#C5A059] hover:text-[#1B365D] text-white transition-colors text-left w-full text-sm font-semibold hidden" data-lang="es">
+                                <img src="https://lh3.googleusercontent.com/d/1FrPrn4T4fwNLxdYHw2ifWaHzoJQ200yk" class="w-5 h-5 rounded-full object-cover shadow-sm" alt="ES"> Español
+                            </button>
+                            <button class="lang-option flex items-center gap-3 px-4 py-3 hover:bg-[#C5A059] hover:text-[#1B365D] text-white transition-colors text-left w-full text-sm font-semibold" data-lang="en">
+                                <img src="https://lh3.googleusercontent.com/d/1CbwSc21CoJJJteboqb8iYVGN-KuDX47X" class="w-5 h-5 rounded-full object-cover shadow-sm" alt="EN"> English
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -140,13 +158,22 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#204788] border-t border-[#204788]">
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1B365D] border-t border-[#1B365D]">
+            <!-- Mobile Language Switcher (Dedicated Top Bar) -->
+            <div class="px-4 py-4 border-b border-[#C5A059]/20 mb-2 flex justify-center gap-4 bg-[#1B365D]/50">
+                <button class="mobile-lang-btn active flex items-center gap-2 px-5 py-2 rounded-full bg-[#C5A059] text-[#1B365D] font-bold text-sm transition-all shadow-md" data-lang="es">
+                    <img src="https://lh3.googleusercontent.com/d/1FrPrn4T4fwNLxdYHw2ifWaHzoJQ200yk" class="w-5 h-5 rounded-full object-cover shadow-sm" alt="ES"> ES
+                </button>
+                <button class="mobile-lang-btn flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 text-white font-bold text-sm hover:bg-white/20 transition-all border border-transparent" data-lang="en">
+                    <img src="https://lh3.googleusercontent.com/d/1CbwSc21CoJJJteboqb8iYVGN-KuDX47X" class="w-5 h-5 rounded-full object-cover shadow-sm" alt="EN"> EN
+                </button>
+            </div>
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" data-i18n="nav-about" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Quiénes Somos</a>
-                <a href="#services" data-i18n="nav-services" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Servicios</a>
-                <a href="#sectors" data-i18n="nav-sectors" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Sectores</a>
-                <a href="#compliance" data-i18n="nav-compliance" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Cumplimiento</a>
-                <a href="#contact" data-i18n="nav-contact" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Contacto</a>
+                <a href="#about" data-i18n="nav-about" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#C5A059] hover:bg-[#3F3F3F] rounded-md">Quiénes Somos</a>
+                <a href="#services" data-i18n="nav-services" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#C5A059] hover:bg-[#3F3F3F] rounded-md">Servicios</a>
+                <a href="#sectors" data-i18n="nav-sectors" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#C5A059] hover:bg-[#3F3F3F] rounded-md">Sectores</a>
+                <a href="#compliance" data-i18n="nav-compliance" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#C5A059] hover:bg-[#3F3F3F] rounded-md">Cumplimiento</a>
+                <a href="#contact" data-i18n="nav-contact" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#C5A059] hover:bg-[#3F3F3F] rounded-md">Contacto</a>
             </div>
         </div>
     </nav>
@@ -155,22 +182,22 @@
     <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Generadores Eléctricos - TRIC, C.A." class="w-full h-full object-cover" loading="lazy" />
-            <div class="absolute inset-0 bg-[#204788]/60 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-[#1B365D]/60 mix-blend-multiply"></div>
         </div>
        
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 <span data-i18n="hero-title-1">Soluciones de Energía para un País que</span> <br/>
-                <span class="text-[#39D87E]" data-i18n="hero-title-2">Necesita Autogenerar</span>
+                <span class="text-[#C5A059]" data-i18n="hero-title-2">Necesita Autogenerar</span>
             </h1>
             <p class="text-xl md:text-2xl text-slate-200 mb-10 max-w-3xl mx-auto font-light" data-i18n="hero-subtitle">
                 Proyectos de Autogeneración | Plantas eléctricas | Proyectos de Confiabilidad Operacional | Venezuela.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" data-i18n="hero-btn-contact" class="bg-[#39D87E] text-[#204788] px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-[#39D87E]/90 transition-all transform hover:-translate-y-1 shadow-lg">
+                <a href="#contact" data-i18n="hero-btn-contact" class="bg-[#C5A059] text-[#1B365D] px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-[#C5A059]/90 transition-all transform hover:-translate-y-1 shadow-lg">
                     Contáctanos
                 </a>
-                <a href="#services" data-i18n="hero-btn-services" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#204788] transition-all">
+                <a href="#services" data-i18n="hero-btn-services" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#1B365D] transition-all">
                     Nuestros Servicios
                 </a>
             </div>
@@ -181,43 +208,43 @@
     <section id="about" class="py-20 bg-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="about-title">Quiénes Somos</h2>
-                <div class="w-24 h-1 bg-[#39D87E] mx-auto"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4" data-i18n="about-title">Quiénes Somos</h2>
+                <div class="w-24 h-1 bg-[#C5A059] mx-auto"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
                     <p class="text-lg text-slate-600 leading-relaxed" data-i18n="about-p1">
-                        <span class='font-bold text-[#204788]'>TRIC, C.A.</span> es una empresa venezolana legalmente constituida, dedicada al diseño, suministro, instalación y mantenimiento de sistemas de Autogeneración de energía.
+                        <span class='font-bold text-[#1B365D]'>TRIC, C.A.</span> es una empresa venezolana legalmente constituida, dedicada al diseño, suministro, instalación y mantenimiento de sistemas de Autogeneración de energía.
                     </p>
                     <p class="text-lg text-slate-600 leading-relaxed" data-i18n="about-p2">
                         Nuestro enfoque combina ingeniería, experiencia operativa y una red de proveedores internacionales para ofrecer soluciones confiables y escalables.
                     </p>
                     <p class="text-lg text-slate-600 leading-relaxed" data-i18n="about-p3">
-                        Entendemos que la realidad energética del país exige autonomía, confiabilidad operacional y capacidad de respuesta inmediata. Por eso desarrollamos soluciones de autogeneración entre <span class='font-bold text-[#204788]'>375 y 2500 kVA</span>.
+                        Entendemos que la realidad energética del país exige autonomía, confiabilidad operacional y capacidad de respuesta inmediata. Por eso desarrollamos soluciones de autogeneración entre <span class='font-bold text-[#1B365D]'>375 y 2500 kVA</span>.
                     </p>
                 </div>
                
                 <div class="grid gap-6">
-                    <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-[#39D87E] shadow-sm hover:shadow-md transition-shadow">
+                    <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-[#C5A059] shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex items-start gap-4">
                             <div class="bg-slate-200 p-3 rounded-full">
-                                <i data-lucide="compass" class="w-8 h-8 text-[#204788]"></i>
+                                <i data-lucide="compass" class="w-8 h-8 text-[#1B365D]"></i>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-[#204788] mb-2" data-i18n="about-mission-title">Nuestra Misión</h3>
+                                <h3 class="text-xl font-bold text-[#1B365D] mb-2" data-i18n="about-mission-title">Nuestra Misión</h3>
                                 <p class="text-slate-600" data-i18n="about-mission-desc">Proveer soluciones de Autogeneración que garanticen continuidad operativa a empresas y organizaciones en Venezuela, mediante proyectos de energía confiables, eficientes y adaptados a los más altos estándares de gestión.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-[#204788] shadow-sm hover:shadow-md transition-shadow">
+                    <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-[#1B365D] shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex items-start gap-4">
-                            <div class="bg-[#39D87E]/20 p-3 rounded-full">
-                                <i data-lucide="target" class="w-8 h-8 text-[#39D87E]"></i>
+                            <div class="bg-[#C5A059]/20 p-3 rounded-full">
+                                <i data-lucide="target" class="w-8 h-8 text-[#C5A059]"></i>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-[#204788] mb-2" data-i18n="about-vision-title">Nuestra Visión</h3>
+                                <h3 class="text-xl font-bold text-[#1B365D] mb-2" data-i18n="about-vision-title">Nuestra Visión</h3>
                                 <p class="text-slate-600" data-i18n="about-vision-desc">Ser empresa líder en soluciones de energía auxiliar y autogeneración en Venezuela, reconocida por su capacidad técnica, su compromiso con la calidad y su aporte al desarrollo industrial y comercial del país.</p>
                             </div>
                         </div>
@@ -227,27 +254,27 @@
             
             <!-- Valores -->
             <div class="mt-16">
-                <h3 class="text-2xl font-bold text-center text-[#204788] mb-8" data-i18n="about-values-title">Nuestros Valores</h3>
+                <h3 class="text-2xl font-bold text-center text-[#1B365D] mb-8" data-i18n="about-values-title">Nuestros Valores</h3>
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
-                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#39D87E] transition-colors">
-                        <i data-lucide="shield-check" class="w-8 h-8 mx-auto text-[#39D87E] mb-2"></i>
-                        <span class="font-semibold text-[#204788]" data-i18n="val-1">Confiabilidad</span>
+                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#C5A059] transition-colors">
+                        <i data-lucide="shield-check" class="w-8 h-8 mx-auto text-[#C5A059] mb-2"></i>
+                        <span class="font-semibold text-[#1B365D]" data-i18n="val-1">Confiabilidad</span>
                     </div>
-                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#39D87E] transition-colors">
-                        <i data-lucide="trending-up" class="w-8 h-8 mx-auto text-[#39D87E] mb-2"></i>
-                        <span class="font-semibold text-[#204788]" data-i18n="val-2">Creación de Valor</span>
+                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#C5A059] transition-colors">
+                        <i data-lucide="trending-up" class="w-8 h-8 mx-auto text-[#C5A059] mb-2"></i>
+                        <span class="font-semibold text-[#1B365D]" data-i18n="val-2">Creación de Valor</span>
                     </div>
-                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#39D87E] transition-colors">
-                        <i data-lucide="settings" class="w-8 h-8 mx-auto text-[#39D87E] mb-2"></i>
-                        <span class="font-semibold text-[#204788]" data-i18n="val-3">Ingeniería aplicada</span>
+                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#C5A059] transition-colors">
+                        <i data-lucide="settings" class="w-8 h-8 mx-auto text-[#C5A059] mb-2"></i>
+                        <span class="font-semibold text-[#1B365D]" data-i18n="val-3">Ingeniería aplicada</span>
                     </div>
-                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#39D87E] transition-colors">
-                        <i data-lucide="hard-hat" class="w-8 h-8 mx-auto text-[#39D87E] mb-2"></i>
-                        <span class="font-semibold text-[#204788]" data-i18n="val-4">Seguridad operativa</span>
+                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#C5A059] transition-colors">
+                        <i data-lucide="hard-hat" class="w-8 h-8 mx-auto text-[#C5A059] mb-2"></i>
+                        <span class="font-semibold text-[#1B365D]" data-i18n="val-4">Seguridad operativa</span>
                     </div>
-                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#39D87E] transition-colors col-span-2 md:col-span-1">
-                        <i data-lucide="users" class="w-8 h-8 mx-auto text-[#39D87E] mb-2"></i>
-                        <span class="font-semibold text-[#204788]" data-i18n="val-5">Compromiso con el cliente</span>
+                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#C5A059] transition-colors col-span-2 md:col-span-1">
+                        <i data-lucide="users" class="w-8 h-8 mx-auto text-[#C5A059] mb-2"></i>
+                        <span class="font-semibold text-[#1B365D]" data-i18n="val-5">Compromiso con el cliente</span>
                     </div>
                 </div>
             </div>
@@ -258,8 +285,8 @@
     <section id="services" class="py-20 bg-slate-50 reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="services-title">Nuestros Servicios</h2>
-                <div class="w-24 h-1 bg-[#39D87E] mx-auto"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4" data-i18n="services-title">Nuestros Servicios</h2>
+                <div class="w-24 h-1 bg-[#C5A059] mx-auto"></div>
                 <p class="mt-6 text-lg text-slate-600 max-w-3xl mx-auto" data-i18n="services-subtitle">
                     Soluciones integrales de energía auxiliar y autogeneración adaptadas a las necesidades de su empresa.
                 </p>
@@ -270,13 +297,13 @@
                 <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-slate-100">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Plantas Eléctricas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
+                        <div class="absolute inset-0 bg-[#1B365D]/20 group-hover:bg-transparent transition-colors"></div>
                     </div>
                     <div class="p-8">
-                        <div class="w-12 h-12 bg-[#39D87E]/10 rounded-lg flex items-center justify-center mb-6">
-                            <i data-lucide="zap" class="w-6 h-6 text-[#39D87E]"></i>
+                        <div class="w-12 h-12 bg-[#C5A059]/10 rounded-lg flex items-center justify-center mb-6">
+                            <i data-lucide="zap" class="w-6 h-6 text-[#C5A059]"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-1-title">Plantas Eléctricas</h3>
+                        <h3 class="text-xl font-bold text-[#1B365D] mb-3" data-i18n="srv-1-title">Plantas Eléctricas</h3>
                         <p class="text-slate-600" data-i18n="srv-1-desc">Suministro e instalación de grupos electrógenos de alta capacidad (375 a 2500 kVA) para aplicaciones continuas o de emergencia.</p>
                     </div>
                 </div>
@@ -285,13 +312,13 @@
                 <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-slate-100">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Proyectos de Autogeneración" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
+                        <div class="absolute inset-0 bg-[#1B365D]/20 group-hover:bg-transparent transition-colors"></div>
                     </div>
                     <div class="p-8">
-                        <div class="w-12 h-12 bg-[#39D87E]/10 rounded-lg flex items-center justify-center mb-6">
-                            <i data-lucide="cpu" class="w-6 h-6 text-[#39D87E]"></i>
+                        <div class="w-12 h-12 bg-[#C5A059]/10 rounded-lg flex items-center justify-center mb-6">
+                            <i data-lucide="cpu" class="w-6 h-6 text-[#C5A059]"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-2-title">Proyectos de Autogeneración</h3>
+                        <h3 class="text-xl font-bold text-[#1B365D] mb-3" data-i18n="srv-2-title">Proyectos de Autogeneración</h3>
                         <p class="text-slate-600" data-i18n="srv-2-desc">Ingeniería conceptual, básica y de detalle para sistemas de generación eléctrica autónoma, sincronización y paralelismo.</p>
                     </div>
                 </div>
@@ -300,13 +327,13 @@
                 <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-slate-100">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Mantenimiento" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
+                        <div class="absolute inset-0 bg-[#1B365D]/20 group-hover:bg-transparent transition-colors"></div>
                     </div>
                     <div class="p-8">
-                        <div class="w-12 h-12 bg-[#39D87E]/10 rounded-lg flex items-center justify-center mb-6">
-                            <i data-lucide="wrench" class="w-6 h-6 text-[#39D87E]"></i>
+                        <div class="w-12 h-12 bg-[#C5A059]/10 rounded-lg flex items-center justify-center mb-6">
+                            <i data-lucide="wrench" class="w-6 h-6 text-[#C5A059]"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-3-title">Mantenimiento Especializado</h3>
+                        <h3 class="text-xl font-bold text-[#1B365D] mb-3" data-i18n="srv-3-title">Mantenimiento Especializado</h3>
                         <p class="text-slate-600" data-i18n="srv-3-desc">Planes de mantenimiento preventivo y correctivo para garantizar la máxima disponibilidad y vida útil de sus equipos.</p>
                     </div>
                 </div>
@@ -318,8 +345,8 @@
     <section id="sectors" class="py-20 bg-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="sectors-title">Sectores que Atendemos</h2>
-                <div class="w-24 h-1 bg-[#39D87E] mx-auto"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4" data-i18n="sectors-title">Sectores que Atendemos</h2>
+                <div class="w-24 h-1 bg-[#C5A059] mx-auto"></div>
                 <p class="mt-6 text-lg text-slate-600 max-w-3xl mx-auto" data-i18n="sectors-subtitle">
                     Nuestra experiencia abarca los sectores más exigentes de la economía venezolana.
                 </p>
@@ -329,9 +356,9 @@
                 <!-- Sector 1 -->
                 <div class="relative rounded-xl overflow-hidden group h-80">
                     <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Industria" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#204788] via-[#204788]/50 to-transparent opacity-90"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1B365D] via-[#1B365D]/50 to-transparent opacity-90"></div>
                     <div class="absolute bottom-0 left-0 p-8 w-full">
-                        <i data-lucide="factory" class="w-10 h-10 text-[#39D87E] mb-4"></i>
+                        <i data-lucide="factory" class="w-10 h-10 text-[#C5A059] mb-4"></i>
                         <h3 class="text-2xl font-bold text-white mb-2" data-i18n="sec-1-title">Industria</h3>
                         <p class="text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0" data-i18n="sec-1-desc">Manufactura, procesamiento de alimentos, plásticos y metalmecánica.</p>
                     </div>
@@ -340,9 +367,9 @@
                 <!-- Sector 2 -->
                 <div class="relative rounded-xl overflow-hidden group h-80">
                     <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Comercios" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#204788] via-[#204788]/50 to-transparent opacity-90"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1B365D] via-[#1B365D]/50 to-transparent opacity-90"></div>
                     <div class="absolute bottom-0 left-0 p-8 w-full">
-                        <i data-lucide="shopping-cart" class="w-10 h-10 text-[#39D87E] mb-4"></i>
+                        <i data-lucide="shopping-cart" class="w-10 h-10 text-[#C5A059] mb-4"></i>
                         <h3 class="text-2xl font-bold text-white mb-2" data-i18n="sec-2-title">Comercios y Retail</h3>
                         <p class="text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0" data-i18n="sec-2-desc">Cadenas de supermercados, centros comerciales y grandes superficies.</p>
                     </div>
@@ -351,9 +378,9 @@
                 <!-- Sector 3 -->
                 <div class="relative rounded-xl overflow-hidden group h-80">
                     <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Servicios Petroleros" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#204788] via-[#204788]/50 to-transparent opacity-90"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1B365D] via-[#1B365D]/50 to-transparent opacity-90"></div>
                     <div class="absolute bottom-0 left-0 p-8 w-full">
-                        <i data-lucide="droplet" class="w-10 h-10 text-[#39D87E] mb-4"></i>
+                        <i data-lucide="droplet" class="w-10 h-10 text-[#C5A059] mb-4"></i>
                         <h3 class="text-2xl font-bold text-white mb-2" data-i18n="sec-3-title">Servicios Petroleros</h3>
                         <p class="text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0" data-i18n="sec-3-desc">Operaciones en campo, facilidades de producción y campamentos.</p>
                     </div>
@@ -367,22 +394,22 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="compliance-title">Cumplimiento Legal y Normativo</h2>
-                    <div class="w-24 h-1 bg-[#39D87E] mb-6"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4" data-i18n="compliance-title">Cumplimiento Legal y Normativo</h2>
+                    <div class="w-24 h-1 bg-[#C5A059] mb-6"></div>
                     <p class="text-lg text-slate-600 mb-6" data-i18n="compliance-desc">
                         Garantizamos que todos nuestros proyectos y operaciones cumplen estrictamente con las normativas legales, fiscales y parafiscales vigentes en Venezuela.
                     </p>
                     <ul class="space-y-4">
                         <li class="flex items-center gap-3 text-slate-700">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#39D87E]"></i>
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#C5A059]"></i>
                             <span data-i18n="comp-1">Inscripción en el Registro Nacional de Contratistas (RNC)</span>
                         </li>
                         <li class="flex items-center gap-3 text-slate-700">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#39D87E]"></i>
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#C5A059]"></i>
                             <span data-i18n="comp-2">Solvencias Laborales y Tributarias al día</span>
                         </li>
                         <li class="flex items-center gap-3 text-slate-700">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#39D87E]"></i>
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#C5A059]"></i>
                             <span data-i18n="comp-3">Cumplimiento de normativas de seguridad industrial (INPSASEL)</span>
                         </li>
                     </ul>
@@ -406,12 +433,12 @@
     </section>
 
     <!-- Contacto (Reveal) -->
-    <section id="contact" class="py-20 bg-[#204788] text-white reveal">
+    <section id="contact" class="py-20 bg-[#1B365D] text-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contact-title">Contáctanos</h2>
-                    <div class="w-24 h-1 bg-[#39D87E] mb-8"></div>
+                    <div class="w-24 h-1 bg-[#C5A059] mb-8"></div>
                     <p class="text-slate-300 mb-8 text-lg" data-i18n="contact-subtitle">
                         ¿Listo para asegurar la continuidad operativa de su empresa? Nuestro equipo de ingenieros está preparado para asesorarle.
                     </p>
@@ -419,7 +446,7 @@
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
                             <div class="bg-white/10 p-3 rounded-lg">
-                                <i data-lucide="map-pin" class="w-6 h-6 text-[#39D87E]"></i>
+                                <i data-lucide="map-pin" class="w-6 h-6 text-[#C5A059]"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-lg" data-i18n="contact-address-title">Ubicación</h4>
@@ -429,32 +456,32 @@
                         
                         <div class="flex items-start gap-4">
                             <div class="bg-white/10 p-3 rounded-lg">
-                                <i data-lucide="mail" class="w-6 h-6 text-[#39D87E]"></i>
+                                <i data-lucide="mail" class="w-6 h-6 text-[#C5A059]"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-lg" data-i18n="contact-email-title">Correo Electrónico</h4>
-                                <a href="mailto:info.tric@gmail.com" class="text-slate-300 hover:text-[#39D87E] transition-colors">info.tric@gmail.com</a>
+                                <a href="mailto:info.tric@gmail.com" class="text-slate-300 hover:text-[#C5A059] transition-colors">info.tric@gmail.com</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-xl p-8 shadow-xl text-slate-800">
-                    <h3 class="text-2xl font-bold text-[#204788] mb-6" data-i18n="contact-form-title">Envíenos un mensaje</h3>
+                    <h3 class="text-2xl font-bold text-[#1B365D] mb-6" data-i18n="contact-form-title">Envíenos un mensaje</h3>
                     <form id="contact-form" class="space-y-4">
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-name">Nombre / Empresa</label>
-                            <input type="text" id="name" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#39D87E] focus:border-transparent outline-none transition-all">
+                            <input type="text" id="name" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-email">Correo Electrónico</label>
-                            <input type="email" id="email" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#39D87E] focus:border-transparent outline-none transition-all">
+                            <input type="email" id="email" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-msg">Mensaje</label>
-                            <textarea id="message" rows="4" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#39D87E] focus:border-transparent outline-none transition-all"></textarea>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-[#39D87E] text-[#204788] font-bold py-3 rounded-md hover:bg-[#39D87E]/90 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
+                        <button type="submit" class="w-full bg-[#C5A059] text-[#1B365D] font-bold py-3 rounded-md hover:bg-[#C5A059]/90 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
                             <i data-lucide="send" class="w-5 h-5"></i>
                             <span data-i18n="form-btn">Enviar Mensaje</span>
                         </button>
@@ -465,7 +492,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#153261] text-slate-400 py-8 border-t border-white/10">
+    <footer class="bg-[#383B3E] text-slate-400 py-8 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-2">
                 <span class="text-xl font-bold text-white tracking-wider font-montserrat">TRIC, C.A.</span>
@@ -474,19 +501,107 @@
                 &copy; <span id="year"></span> TRIC, C.A. <span data-i18n="footer-rights">Todos los derechos reservados.</span>
             </p>
             <div class="flex gap-4">
-                <a href="#" class="hover:text-[#39D87E] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                <a href="#" class="hover:text-[#39D87E] transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-[#C5A059] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-[#C5A059] transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-[#39D87E] text-[#204788] p-3 rounded-full shadow-lg hover:bg-[#39D87E]/90 transition-all transform hover:-translate-y-1 scroll-hidden z-50">
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-[#C5A059] text-[#1B365D] p-3 rounded-full shadow-lg hover:bg-[#C5A059]/90 transition-all transform hover:-translate-y-1 scroll-hidden z-50">
         <i data-lucide="arrow-up" class="w-6 h-6"></i>
     </button>
 
     <!-- Scripts -->
     <script>
+        const translations = {
+            es: {
+                "nav-about": "Quiénes Somos", "nav-services": "Servicios", "nav-sectors": "Sectores", "nav-compliance": "Cumplimiento", "nav-contact": "Contacto",
+                "hero-title-1": "Soluciones de Energía para un País que", "hero-title-2": "Necesita Autogenerar", "hero-subtitle": "Proyectos de Autogeneración | Plantas eléctricas | Proyectos de Confiabilidad Operacional | Venezuela.", "hero-btn-contact": "Contáctanos", "hero-btn-services": "Nuestros Servicios",
+                "about-title": "Quiénes Somos", "about-p1": "<span class='font-bold text-[#1B365D]'>TRIC, C.A.</span> es una empresa venezolana legalmente constituida, dedicada al diseño, suministro, instalación y mantenimiento de sistemas de Autogeneración de energía.", "about-p2": "Nuestro enfoque combina ingeniería, experiencia operativa y una red de proveedores internacionales para ofrecer soluciones confiables y escalables.", "about-p3": "Entendemos que la realidad energética del país exige autonomía, confiabilidad operacional y capacidad de respuesta inmediata. Por eso desarrollamos soluciones de autogeneración entre <span class='font-bold text-[#1B365D]'>375 y 2500 kVA</span>.", "about-mission-title": "Nuestra Misión", "about-mission-desc": "Proveer soluciones de Autogeneración que garanticen continuidad operativa a empresas y organizaciones en Venezuela, mediante proyectos de energía confiables, eficientes y adaptados a los más altos estándares de gestión.", "about-vision-title": "Nuestra Visión", "about-vision-desc": "Ser empresa líder en soluciones de energía auxiliar y autogeneración en Venezuela, reconocida por su capacidad técnica, su compromiso con la calidad y su aporte al desarrollo industrial y comercial del país.",
+                "about-values-title": "Nuestros Valores", "val-1": "Confiabilidad", "val-2": "Creación de Valor", "val-3": "Ingeniería aplicada", "val-4": "Seguridad operativa", "val-5": "Compromiso con el cliente",
+                "services-title": "Nuestros Servicios", "services-subtitle": "Soluciones integrales de energía auxiliar y autogeneración adaptadas a las necesidades de su empresa.", "srv-1-title": "Plantas Eléctricas", "srv-1-desc": "Suministro e instalación de grupos electrógenos de alta capacidad (375 a 2500 kVA) para aplicaciones continuas o de emergencia.", "srv-2-title": "Proyectos de Autogeneración", "srv-2-desc": "Ingeniería conceptual, básica y de detalle para sistemas de generación eléctrica autónoma, sincronización y paralelismo.", "srv-3-title": "Mantenimiento Especializado", "srv-3-desc": "Planes de mantenimiento preventivo y correctivo para garantizar la máxima disponibilidad y vida útil de sus equipos.",
+                "sectors-title": "Sectores que Atendemos", "sectors-subtitle": "Nuestra experiencia abarca los sectores más exigentes de la economía venezolana.", "sec-1-title": "Industria", "sec-1-desc": "Manufactura, procesamiento de alimentos, plásticos y metalmecánica.", "sec-2-title": "Comercios y Retail", "sec-2-desc": "Cadenas de supermercados, centros comerciales y grandes superficies.", "sec-3-title": "Servicios Petroleros", "sec-3-desc": "Operaciones en campo, facilidades de producción y campamentos.",
+                "compliance-title": "Cumplimiento Legal y Normativo", "compliance-desc": "Garantizamos que todos nuestros proyectos y operaciones cumplen estrictamente con las normativas legales, fiscales y parafiscales vigentes en Venezuela.", "comp-1": "Inscripción en el Registro Nacional de Contratistas (RNC)", "comp-2": "Solvencias Laborales y Tributarias al día", "comp-3": "Cumplimiento de normativas de seguridad industrial (INPSASEL)",
+                "contact-title": "Contáctanos", "contact-subtitle": "¿Listo para asegurar la continuidad operativa de su empresa? Nuestro equipo de ingenieros está preparado para asesorarle.", "contact-address-title": "Ubicación", "contact-address-desc": "Av Valmore Rodriguez, Naguanagua, Carabobo, Venezuela", "contact-email-title": "Correo Electrónico", "contact-form-title": "Envíenos un mensaje", "form-name": "Nombre / Empresa", "form-email": "Correo Electrónico", "form-msg": "Mensaje", "form-btn": "Enviar Mensaje",
+                "footer-rights": "Todos los derechos reservados."
+            },
+            en: {
+                "nav-about": "About Us", "nav-services": "Services", "nav-sectors": "Sectors", "nav-compliance": "Compliance", "nav-contact": "Contact",
+                "hero-title-1": "Energy Solutions for a Country that", "hero-title-2": "Needs to Self-Generate", "hero-subtitle": "Self-Generation Projects | Power Plants | Operational Reliability Projects | Venezuela.", "hero-btn-contact": "Contact Us", "hero-btn-services": "Our Services",
+                "about-title": "About Us", "about-p1": "<span class='font-bold text-[#1B365D]'>TRIC, C.A.</span> is a legally constituted Venezuelan company, dedicated to the design, supply, installation, and maintenance of power Self-Generation systems.", "about-p2": "Our approach combines engineering, operational experience, and a network of international suppliers to offer reliable and scalable solutions.", "about-p3": "We understand that the country's energy reality demands autonomy, operational reliability, and immediate response capacity. That is why we develop self-generation solutions between <span class='font-bold text-[#1B365D]'>375 and 2500 kVA</span>.", "about-mission-title": "Our Mission", "about-mission-desc": "To provide Self-Generation solutions that guarantee operational continuity to companies and organizations in Venezuela, through reliable, efficient energy projects adapted to the highest management standards.", "about-vision-title": "Our Vision", "about-vision-desc": "To be a leading company in auxiliary energy and self-generation solutions in Venezuela, recognized for its technical capacity, commitment to quality, and contribution to the industrial and commercial development of the country.",
+                "about-values-title": "Our Values", "val-1": "Reliability", "val-2": "Value Creation", "val-3": "Applied Engineering", "val-4": "Operational Safety", "val-5": "Commitment to the Customer",
+                "services-title": "Our Services", "services-subtitle": "Comprehensive auxiliary energy and self-generation solutions tailored to your company's needs.", "srv-1-title": "Power Plants", "srv-1-desc": "Supply and installation of high-capacity generator sets (375 to 2500 kVA) for continuous or emergency applications.", "srv-2-title": "Self-Generation Projects", "srv-2-desc": "Conceptual, basic, and detailed engineering for autonomous power generation, synchronization, and paralleling systems.", "srv-3-title": "Specialized Maintenance", "srv-3-desc": "Preventive and corrective maintenance plans to guarantee maximum availability and lifespan of your equipment.",
+                "sectors-title": "Sectors We Serve", "sectors-subtitle": "Our experience covers the most demanding sectors of the Venezuelan economy.", "sec-1-title": "Industry", "sec-1-desc": "Manufacturing, food processing, plastics, and metalworking.", "sec-2-title": "Commerce and Retail", "sec-2-desc": "Supermarket chains, shopping centers, and large stores.", "sec-3-title": "Oil Services", "sec-3-desc": "Field operations, production facilities, and camps.",
+                "compliance-title": "Legal and Regulatory Compliance", "compliance-desc": "We guarantee that all our projects and operations strictly comply with the legal, fiscal, and parafiscal regulations in force in Venezuela.", "comp-1": "Registration in the National Registry of Contractors (RNC)", "comp-2": "Labor and Tax Solvencies up to date", "comp-3": "Compliance with industrial safety regulations (INPSASEL)",
+                "contact-title": "Contact Us", "contact-subtitle": "Ready to ensure the operational continuity of your company? Our team of engineers is ready to advise you.", "contact-address-title": "Location", "contact-address-desc": "Av Valmore Rodriguez, Naguanagua, Carabobo, Venezuela", "contact-email-title": "Email", "contact-form-title": "Send us a message", "form-name": "Name / Company", "form-email": "Email", "form-msg": "Message", "form-btn": "Send Message",
+                "footer-rights": "All rights reserved."
+            }
+        };
+
+        const desktopLangBtn = document.getElementById('desktop-lang-btn');
+        const desktopLangDropdown = document.getElementById('desktop-lang-dropdown');
+
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = translations[lang][key];
+                    else el.innerHTML = translations[lang][key];
+                }
+            });
+        
+            const desktopFlagImg = document.getElementById('desktop-current-flag-img');
+            if (desktopFlagImg) {
+                desktopFlagImg.src = lang === 'es' ? 'https://lh3.googleusercontent.com/d/1FrPrn4T4fwNLxdYHw2ifWaHzoJQ200yk' : 'https://lh3.googleusercontent.com/d/1CbwSc21CoJJJteboqb8iYVGN-KuDX47X';
+                desktopFlagImg.alt = lang.toUpperCase();
+            }
+            const desktopLangText = document.getElementById('desktop-current-lang');
+            if (desktopLangText) desktopLangText.textContent = lang.toUpperCase();
+            
+            document.querySelectorAll('#desktop-lang-dropdown .lang-option').forEach(btn => {
+                btn.classList.toggle('hidden', btn.dataset.lang === lang);
+            });
+        
+            document.querySelectorAll('.mobile-lang-btn').forEach(btn => {
+                const isActive = btn.dataset.lang === lang;
+                btn.classList.toggle('bg-[#C5A059]', isActive);
+                btn.classList.toggle('text-[#1B365D]', isActive);
+                btn.classList.toggle('bg-white/10', !isActive);
+                btn.classList.toggle('text-white', !isActive);
+            });
+        
+            localStorage.setItem('tric_lang', lang);
+            document.documentElement.lang = lang;
+        
+            if (desktopLangDropdown) {
+                desktopLangDropdown.classList.add('hidden');
+                desktopLangDropdown.classList.remove('flex');
+            }
+        }
+        
+        if (desktopLangBtn) {
+            desktopLangBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                desktopLangDropdown.classList.toggle('hidden');
+                desktopLangDropdown.classList.toggle('flex');
+            });
+        }
+
+        document.addEventListener('click', () => {
+            if (desktopLangDropdown) {
+                desktopLangDropdown.classList.add('hidden');
+                desktopLangDropdown.classList.remove('flex');
+            }
+        });
+
+        document.querySelectorAll('.lang-option, .mobile-lang-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => changeLanguage(e.currentTarget.dataset.lang));
+        });
+
+        const savedLang = localStorage.getItem('tric_lang') || 'es';
+        changeLanguage(savedLang);
+
         // Initialize Lucide Icons
         lucide.createIcons();
 
