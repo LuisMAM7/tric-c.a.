@@ -117,7 +117,7 @@
                 
                 <!-- Brand Identity: Logo -->
                 <a href="#home" class="flex items-center gap-2 group active:scale-95 transition-transform duration-150">
-                    <span class="text-2xl font-bold text-white tracking-wider font-montserrat">TRIC, C.A.</span>
+                    <img src="https://lh3.googleusercontent.com/d/1vJfdrIJjpRM3JQV_o6pLPy15liMYD9xJ" class="h-10 w-auto group-hover:scale-105 transition-transform duration-300" alt="TRIC, C.A.">
                 </a>
                 
                 <!-- Desktop Menu -->
@@ -495,7 +495,7 @@
     </section>
 
     <!-- Proveedores y Alianzas (Marquee) -->
-    <section class="py-16 bg-slate-50 border-y border-slate-200 overflow-hidden">
+    <section id="alliances" class="py-16 bg-slate-50 border-y border-slate-200 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4" data-i18n="alliances-title">Proveedores y Alianzas</h2>
             <div class="w-24 h-1 bg-[#C5A059] mx-auto mb-6"></div>
@@ -674,18 +674,18 @@
 
                 <div class="bg-white rounded-xl p-8 shadow-xl text-slate-800">
                     <h3 class="text-2xl font-bold text-[#1B365D] mb-6" data-i18n="contact-form-title">Envíenos un mensaje</h3>
-                    <form id="contact-form" class="space-y-4">
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="space-y-4">
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-name">Nombre / Empresa</label>
-                            <input type="text" id="name" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all">
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-email">Correo Electrónico</label>
-                            <input type="email" id="email" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all">
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-msg">Mensaje</label>
-                            <textarea id="message" rows="4" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all"></textarea>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all"></textarea>
                         </div>
                         <button type="submit" class="w-full bg-[#C5A059] text-[#1B365D] font-bold py-3 rounded-md hover:bg-[#C5A059]/90 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
                             <i data-lucide="send" class="w-5 h-5"></i>
@@ -701,7 +701,7 @@
     <footer class="bg-[#383B3E] text-slate-400 py-8 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-2">
-                <span class="text-xl font-bold text-white tracking-wider font-montserrat">TRIC, C.A.</span>
+                <img src="https://lh3.googleusercontent.com/d/1vJfdrIJjpRM3JQV_o6pLPy15liMYD9xJ" class="h-10 w-auto" alt="TRIC, C.A.">
             </div>
             <p class="text-sm text-center md:text-left">
                 &copy; <span id="year"></span> TRIC, C.A. <span data-i18n="footer-rights">Todos los derechos reservados.</span>
@@ -887,20 +887,37 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Form Submission (Mock)
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
+        // Form Submission (Formspree)
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const btn = e.target.querySelector('button');
+            const form = e.target;
+            const btn = form.querySelector('button');
             const originalText = btn.innerHTML;
             
-            btn.innerHTML = '<i data-lucide="check" class="w-5 h-5"></i> <span>Enviado</span>';
-            lucide.createIcons();
+            const data = new FormData(form);
             
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                e.target.reset();
-                lucide.createIcons();
-            }, 3000);
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    btn.innerHTML = '<i data-lucide="check" class="w-5 h-5"></i> <span>Enviado</span>';
+                    lucide.createIcons();
+                    form.reset();
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        lucide.createIcons();
+                    }, 3000);
+                } else {
+                    alert("Hubo un error al enviar el mensaje. Inténtelo de nuevo.");
+                }
+            } catch (error) {
+                alert("Hubo un error al enviar el mensaje. Inténtelo de nuevo.");
+            }
         });
     </script>
 </body>
