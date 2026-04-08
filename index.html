@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIC, C.A. | Soluciones de Autogeneración y Energía Auxiliar</title>
+    
+    <!-- Canonical & Language Routing -->
+    <link rel="canonical" href="https://tric.com.ve/" />
+    <link rel="alternate" hreflang="es" href="https://tric.com.ve/" />
+    <link rel="alternate" hreflang="x-default" href="https://tric.com.ve/" />
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="TRIC, C.A.: Soluciones de autogeneración entre 375 y 2500 kVA para industrias, comercios y servicios petroleros en Venezuela.">
+    <meta name="keywords" content="Autogeneración, Plantas eléctricas, Confiabilidad Operacional, Venezuela, Energía Auxiliar, Grupos Electrógenos">
+    
+    <!-- Open Graph / Corporate Metadata -->
+    <meta property="og:title" content="TRIC, C.A. | Soluciones de Autogeneración">
+    <meta property="og:description" content="Proyectos de Autogeneración | Plantas eléctricas | Proyectos de Confiabilidad Operacional | Venezuela.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tric.com.ve/">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9"> <!-- Placeholder image -->
+    <meta property="og:site_name" content="TRIC, C.A.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://tric.com.ve/#organization",
+          "name": "TRIC, C.A.",
+          "url": "https://tric.com.ve/",
+          "logo": "https://lh3.googleusercontent.com/d/1EFYbe_zmEx_LWGgI6LxJZbzPic4UIpuM",
+          "description": "Soluciones de autogeneración entre 375 y 2500 kVA para industrias, comercios y servicios petroleros en Venezuela.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Naguanagua, Carabobo",
+            "streetAddress": "Av Valmore Rodriguez",
+            "addressCountry": "VE"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info.tric@gmail.com",
+            "contactType": "customer service",
+            "availableLanguage": ["Spanish"]
+          }
+        },
+        {
+          "@type": "Service",
+          "provider": {
+            "@id": "https://tric.com.ve/#organization"
+          },
+          "name": "Soluciones de Autogeneración y Energía Auxiliar",
+          "description": "Diseño, suministro, instalación y mantenimiento de sistemas de Autogeneración de energía.",
+          "areaServed": "VE"
+        }
+      ]
+    }
+    </script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back to Top Visibility */
+        .scroll-hidden { opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out; }
+        .scroll-visible { opacity: 1; visibility: visible; }
+
+        /* Copy Feedback Animation */
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(5px); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-5px); }
+        }
+        .copy-feedback-active {
+            animation: fadeInOut 2s forwards;
+        }
+
+        /* Infinite Marquee Animation */
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content; 
+            animation: scrollMarquee 30s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused; 
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#204788]/95 backdrop-blur-sm z-50 border-b border-[#204788]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Brand Identity: Logo -->
+                <a href="#home" class="flex items-center gap-2 group active:scale-95 transition-transform duration-150">
+                    <span class="text-2xl font-bold text-white tracking-wider font-montserrat">TRIC, C.A.</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#about" data-i18n="nav-about" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Quiénes Somos</a>
+                    <a href="#services" data-i18n="nav-services" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Servicios</a>
+                    <a href="#sectors" data-i18n="nav-sectors" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Sectores</a>
+                    <a href="#compliance" data-i18n="nav-compliance" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Cumplimiento</a>
+                    
+                    <a href="#contact" data-i18n="nav-contact" class="bg-[#39D87E] text-[#204788] px-5 py-2 rounded-md font-bold uppercase tracking-wider hover:bg-[#39D87E]/90 transition-all ml-2">Contacto</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#204788] border-t border-[#204788]">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" data-i18n="nav-about" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Quiénes Somos</a>
+                <a href="#services" data-i18n="nav-services" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Servicios</a>
+                <a href="#sectors" data-i18n="nav-sectors" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Sectores</a>
+                <a href="#compliance" data-i18n="nav-compliance" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Cumplimiento</a>
+                <a href="#contact" data-i18n="nav-contact" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Generadores Eléctricos - TRIC, C.A." class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-[#204788]/60 mix-blend-multiply"></div>
+        </div>
+       
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <span data-i18n="hero-title-1">Soluciones de Energía para un País que</span> <br/>
+                <span class="text-[#39D87E]" data-i18n="hero-title-2">Necesita Autogenerar</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-200 mb-10 max-w-3xl mx-auto font-light" data-i18n="hero-subtitle">
+                Proyectos de Autogeneración | Plantas eléctricas | Proyectos de Confiabilidad Operacional | Venezuela.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" data-i18n="hero-btn-contact" class="bg-[#39D87E] text-[#204788] px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-[#39D87E]/90 transition-all transform hover:-translate-y-1 shadow-lg">
+                    Contáctanos
+                </a>
+                <a href="#services" data-i18n="hero-btn-services" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#204788] transition-all">
+                    Nuestros Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos (Reveal) -->
+    <section id="about" class="py-20 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="about-title">Quiénes Somos</h2>
+                <div class="w-24 h-1 bg-[#39D87E] mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-slate-600 leading-relaxed" data-i18n="about-p1">
+                        <span class='font-bold text-[#204788]'>TRIC, C.A.</span> es una empresa venezolana legalmente constituida, dedicada al diseño, suministro, instalación y mantenimiento de sistemas de Autogeneración de energía.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed" data-i18n="about-p2">
+                        Nuestro enfoque combina ingeniería, experiencia operativa y una red de proveedores internacionales para ofrecer soluciones confiables y escalables.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed" data-i18n="about-p3">
+                        Entendemos que la realidad energética del país exige autonomía, confiabilidad operacional y capacidad de respuesta inmediata. Por eso desarrollamos soluciones de autogeneración entre <span class='font-bold text-[#204788]'>375 y 2500 kVA</span>.
+                    </p>
+                </div>
+               
+                <div class="grid gap-6">
+                    <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-[#39D87E] shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-slate-200 p-3 rounded-full">
+                                <i data-lucide="compass" class="w-8 h-8 text-[#204788]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#204788] mb-2" data-i18n="about-mission-title">Nuestra Misión</h3>
+                                <p class="text-slate-600" data-i18n="about-mission-desc">Proveer soluciones de Autogeneración que garanticen continuidad operativa a empresas y organizaciones en Venezuela, mediante proyectos de energía confiables, eficientes y adaptados a los más altos estándares de gestión.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-[#204788] shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-[#39D87E]/20 p-3 rounded-full">
+                                <i data-lucide="target" class="w-8 h-8 text-[#39D87E]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#204788] mb-2" data-i18n="about-vision-title">Nuestra Visión</h3>
+                                <p class="text-slate-600" data-i18n="about-vision-desc">Ser empresa líder en soluciones de energía auxiliar y autogeneración en Venezuela, reconocida por su capacidad técnica, su compromiso con la calidad y su aporte al desarrollo industrial y comercial del país.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Valores -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center text-[#204788] mb-8" data-i18n="about-values-title">Nuestros Valores</h3>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#39D87E] transition-colors">
+                        <i data-lucide="shield-check" class="w-8 h-8 mx-auto text-[#39D87E] mb-2"></i>
+                        <span class="font-semibold text-[#204788]" data-i18n="val-1">Confiabilidad</span>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#39D87E] transition-colors">
+                        <i data-lucide="trending-up" class="w-8 h-8 mx-auto text-[#39D87E] mb-2"></i>
+                        <span class="font-semibold text-[#204788]" data-i18n="val-2">Creación de Valor</span>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#39D87E] transition-colors">
+                        <i data-lucide="settings" class="w-8 h-8 mx-auto text-[#39D87E] mb-2"></i>
+                        <span class="font-semibold text-[#204788]" data-i18n="val-3">Ingeniería aplicada</span>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#39D87E] transition-colors">
+                        <i data-lucide="hard-hat" class="w-8 h-8 mx-auto text-[#39D87E] mb-2"></i>
+                        <span class="font-semibold text-[#204788]" data-i18n="val-4">Seguridad operativa</span>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg shadow-sm border border-slate-100 hover:border-[#39D87E] transition-colors col-span-2 md:col-span-1">
+                        <i data-lucide="users" class="w-8 h-8 mx-auto text-[#39D87E] mb-2"></i>
+                        <span class="font-semibold text-[#204788]" data-i18n="val-5">Compromiso con el cliente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios (Reveal) -->
+    <section id="services" class="py-20 bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="services-title">Nuestros Servicios</h2>
+                <div class="w-24 h-1 bg-[#39D87E] mx-auto"></div>
+                <p class="mt-6 text-lg text-slate-600 max-w-3xl mx-auto" data-i18n="services-subtitle">
+                    Soluciones integrales de energía auxiliar y autogeneración adaptadas a las necesidades de su empresa.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-slate-100">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Plantas Eléctricas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-[#39D87E]/10 rounded-lg flex items-center justify-center mb-6">
+                            <i data-lucide="zap" class="w-6 h-6 text-[#39D87E]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-1-title">Plantas Eléctricas</h3>
+                        <p class="text-slate-600" data-i18n="srv-1-desc">Suministro e instalación de grupos electrógenos de alta capacidad (375 a 2500 kVA) para aplicaciones continuas o de emergencia.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-slate-100">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Proyectos de Autogeneración" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-[#39D87E]/10 rounded-lg flex items-center justify-center mb-6">
+                            <i data-lucide="cpu" class="w-6 h-6 text-[#39D87E]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-2-title">Proyectos de Autogeneración</h3>
+                        <p class="text-slate-600" data-i18n="srv-2-desc">Ingeniería conceptual, básica y de detalle para sistemas de generación eléctrica autónoma, sincronización y paralelismo.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-slate-100">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Mantenimiento" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-[#39D87E]/10 rounded-lg flex items-center justify-center mb-6">
+                            <i data-lucide="wrench" class="w-6 h-6 text-[#39D87E]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-3-title">Mantenimiento Especializado</h3>
+                        <p class="text-slate-600" data-i18n="srv-3-desc">Planes de mantenimiento preventivo y correctivo para garantizar la máxima disponibilidad y vida útil de sus equipos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectores (Reveal) -->
+    <section id="sectors" class="py-20 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="sectors-title">Sectores que Atendemos</h2>
+                <div class="w-24 h-1 bg-[#39D87E] mx-auto"></div>
+                <p class="mt-6 text-lg text-slate-600 max-w-3xl mx-auto" data-i18n="sectors-subtitle">
+                    Nuestra experiencia abarca los sectores más exigentes de la economía venezolana.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Sector 1 -->
+                <div class="relative rounded-xl overflow-hidden group h-80">
+                    <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Industria" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#204788] via-[#204788]/50 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <i data-lucide="factory" class="w-10 h-10 text-[#39D87E] mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2" data-i18n="sec-1-title">Industria</h3>
+                        <p class="text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0" data-i18n="sec-1-desc">Manufactura, procesamiento de alimentos, plásticos y metalmecánica.</p>
+                    </div>
+                </div>
+
+                <!-- Sector 2 -->
+                <div class="relative rounded-xl overflow-hidden group h-80">
+                    <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Comercios" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#204788] via-[#204788]/50 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <i data-lucide="shopping-cart" class="w-10 h-10 text-[#39D87E] mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2" data-i18n="sec-2-title">Comercios y Retail</h3>
+                        <p class="text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0" data-i18n="sec-2-desc">Cadenas de supermercados, centros comerciales y grandes superficies.</p>
+                    </div>
+                </div>
+
+                <!-- Sector 3 -->
+                <div class="relative rounded-xl overflow-hidden group h-80">
+                    <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Servicios Petroleros" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#204788] via-[#204788]/50 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <i data-lucide="droplet" class="w-10 h-10 text-[#39D87E] mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2" data-i18n="sec-3-title">Servicios Petroleros</h3>
+                        <p class="text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0" data-i18n="sec-3-desc">Operaciones en campo, facilidades de producción y campamentos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cumplimiento (Reveal) -->
+    <section id="compliance" class="py-20 bg-slate-50 reveal border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="compliance-title">Cumplimiento Legal y Normativo</h2>
+                    <div class="w-24 h-1 bg-[#39D87E] mb-6"></div>
+                    <p class="text-lg text-slate-600 mb-6" data-i18n="compliance-desc">
+                        Garantizamos que todos nuestros proyectos y operaciones cumplen estrictamente con las normativas legales, fiscales y parafiscales vigentes en Venezuela.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#39D87E]"></i>
+                            <span data-i18n="comp-1">Inscripción en el Registro Nacional de Contratistas (RNC)</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#39D87E]"></i>
+                            <span data-i18n="comp-2">Solvencias Laborales y Tributarias al día</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#39D87E]"></i>
+                            <span data-i18n="comp-3">Cumplimiento de normativas de seguridad industrial (INPSASEL)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex items-center justify-center h-32">
+                        <span class="text-xl font-bold text-slate-400">RNC</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex items-center justify-center h-32">
+                        <span class="text-xl font-bold text-slate-400">SENIAT</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex items-center justify-center h-32">
+                        <span class="text-xl font-bold text-slate-400">IVSS</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex items-center justify-center h-32">
+                        <span class="text-xl font-bold text-slate-400">INPSASEL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto (Reveal) -->
+    <section id="contact" class="py-20 bg-[#204788] text-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contact-title">Contáctanos</h2>
+                    <div class="w-24 h-1 bg-[#39D87E] mb-8"></div>
+                    <p class="text-slate-300 mb-8 text-lg" data-i18n="contact-subtitle">
+                        ¿Listo para asegurar la continuidad operativa de su empresa? Nuestro equipo de ingenieros está preparado para asesorarle.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white/10 p-3 rounded-lg">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-[#39D87E]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg" data-i18n="contact-address-title">Ubicación</h4>
+                                <p class="text-slate-300" data-i18n="contact-address-desc">Av Valmore Rodriguez, Naguanagua, Carabobo, Venezuela</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white/10 p-3 rounded-lg">
+                                <i data-lucide="mail" class="w-6 h-6 text-[#39D87E]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg" data-i18n="contact-email-title">Correo Electrónico</h4>
+                                <a href="mailto:info.tric@gmail.com" class="text-slate-300 hover:text-[#39D87E] transition-colors">info.tric@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-xl text-slate-800">
+                    <h3 class="text-2xl font-bold text-[#204788] mb-6" data-i18n="contact-form-title">Envíenos un mensaje</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-name">Nombre / Empresa</label>
+                            <input type="text" id="name" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#39D87E] focus:border-transparent outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-email">Correo Electrónico</label>
+                            <input type="email" id="email" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#39D87E] focus:border-transparent outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-msg">Mensaje</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#39D87E] focus:border-transparent outline-none transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#39D87E] text-[#204788] font-bold py-3 rounded-md hover:bg-[#39D87E]/90 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            <span data-i18n="form-btn">Enviar Mensaje</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#153261] text-slate-400 py-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-bold text-white tracking-wider font-montserrat">TRIC, C.A.</span>
+            </div>
+            <p class="text-sm text-center md:text-left">
+                &copy; <span id="year"></span> TRIC, C.A. <span data-i18n="footer-rights">Todos los derechos reservados.</span>
+            </p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-[#39D87E] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-[#39D87E] transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-[#39D87E] text-[#204788] p-3 rounded-full shadow-lg hover:bg-[#39D87E]/90 transition-all transform hover:-translate-y-1 scroll-hidden z-50">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 80; // Height of fixed nav
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on load
+
+        // Back to Top Button Visibility
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('scroll-hidden');
+                backToTopBtn.classList.add('scroll-visible');
+            } else {
+                backToTopBtn.classList.remove('scroll-visible');
+                backToTopBtn.classList.add('scroll-hidden');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form Submission (Mock)
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i data-lucide="check" class="w-5 h-5"></i> <span>Enviado</span>';
+            lucide.createIcons();
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                e.target.reset();
+                lucide.createIcons();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
