@@ -531,12 +531,12 @@
     <!-- Cumplimiento (Reveal) -->
     <section id="compliance" class="py-16 md:py-20 bg-slate-50 reveal border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div class="lg:col-span-6">
                     <h2 class="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4" data-i18n="compliance-title">Legal and Regulatory Compliance</h2>
                     <div class="w-24 h-1 bg-[#C5A059] mb-6"></div>
                     <p class="text-lg text-slate-600 mb-6" data-i18n="compliance-desc">We guarantee that all our projects and operations strictly comply with the legal, fiscal, and parafiscal regulations in force in Venezuela.</p>
-                    <ul class="space-y-4">
+                    <ul class="space-y-4 mb-10">
                         <li class="flex items-center gap-3 text-slate-700">
                             <i data-lucide="check-circle-2" class="w-6 h-6 text-[#C5A059]"></i>
                             <span data-i18n="comp-1">Registration in the National Registry of Contractors (RNC)</span>
@@ -551,31 +551,53 @@
                         </li>
                     </ul>
                     
-                    <div class="mt-8">
-                        <h3 class="text-xl font-bold text-[#1B365D] mb-4" data-i18n="comp-iso-title">International Standards</h3>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex items-center gap-2">
-                                <i data-lucide="award" class="w-5 h-5 text-[#C5A059]"></i>
-                                <span class="font-semibold text-slate-700 text-sm">ISO 9001</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#1B365D] mb-6" data-i18n="comp-iso-title">International Standards</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                            <div class="flex flex-col items-center text-center group">
+                                <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md mb-3 transform group-hover:scale-110 transition-transform duration-300 border border-slate-200 group-hover:border-[#39D87E] group-hover:bg-[#39D87E]">
+                                    <i data-lucide="check" class="text-[#1B365D] w-8 h-8 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div class="text-[#1B365D] font-bold text-lg tracking-wide group-hover:text-[#39D87E] transition-colors" data-i18n="iso-9001-title">ISO 9001</div>
+                                <div class="text-slate-500 text-sm mt-1 font-medium" data-i18n="iso-9001-desc">Quality</div>
                             </div>
-                            <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex items-center gap-2">
-                                <i data-lucide="award" class="w-5 h-5 text-[#C5A059]"></i>
-                                <span class="font-semibold text-slate-700 text-sm">ISO 14001</span>
+
+                            <div class="flex flex-col items-center text-center group">
+                                <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md mb-3 transform group-hover:scale-110 transition-transform duration-300 border border-slate-200 group-hover:border-[#39D87E] group-hover:bg-[#39D87E]">
+                                    <i data-lucide="leaf" class="text-[#1B365D] w-8 h-8 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div class="text-[#1B365D] font-bold text-lg tracking-wide group-hover:text-[#39D87E] transition-colors" data-i18n="iso-14001-title">ISO 14001</div>
+                                <div class="text-slate-500 text-sm mt-1 font-medium" data-i18n="iso-14001-desc">Environment</div>
                             </div>
-                            <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex items-center gap-2">
-                                <i data-lucide="award" class="w-5 h-5 text-[#C5A059]"></i>
-                                <span class="font-semibold text-slate-700 text-sm">ISO 45001</span>
+
+                            <div class="flex flex-col items-center text-center group">
+                                <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md mb-3 transform group-hover:scale-110 transition-transform duration-300 border border-slate-200 group-hover:border-[#39D87E] group-hover:bg-[#39D87E]">
+                                    <i data-lucide="shield" class="text-[#1B365D] w-8 h-8 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div class="text-[#1B365D] font-bold text-lg tracking-wide group-hover:text-[#39D87E] transition-colors" data-i18n="iso-45001-title">ISO 45001</div>
+                                <div class="text-slate-500 text-sm mt-1 font-medium" data-i18n="iso-45001-desc">Safety</div>
                             </div>
-                            <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex items-center gap-2">
-                                <i data-lucide="award" class="w-5 h-5 text-[#C5A059]"></i>
-                                <span class="font-semibold text-slate-700 text-sm">ISO 37001</span>
+
+                            <div class="flex flex-col items-center text-center group">
+                                <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md mb-3 transform group-hover:scale-110 transition-transform duration-300 border border-slate-200 group-hover:border-[#39D87E] group-hover:bg-[#39D87E]">
+                                    <i data-lucide="lock" class="text-[#1B365D] w-8 h-8 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div class="text-[#1B365D] font-bold text-lg tracking-wide group-hover:text-[#39D87E] transition-colors" data-i18n="iso-37001-title">ISO 37001</div>
+                                <div class="text-slate-500 text-sm mt-1 font-medium" data-i18n="iso-37001-desc">Anti-Bribery</div>
                             </div>
-                            <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex items-center gap-2">
-                                <i data-lucide="award" class="w-5 h-5 text-[#C5A059]"></i>
-                                <span class="font-semibold text-slate-700 text-sm">ISO 55000</span>
+
+                            <div class="flex flex-col items-center text-center group">
+                                <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md mb-3 transform group-hover:scale-110 transition-transform duration-300 border border-slate-200 group-hover:border-[#39D87E] group-hover:bg-[#39D87E]">
+                                    <i data-lucide="settings" class="text-[#1B365D] w-8 h-8 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div class="text-[#1B365D] font-bold text-lg tracking-wide group-hover:text-[#39D87E] transition-colors" data-i18n="iso-55001-title">ISO 55001</div>
+                                <div class="text-slate-500 text-sm mt-1 font-medium" data-i18n="iso-55001-desc">Assets</div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="lg:col-span-6 h-full min-h-[400px] lg:min-h-full rounded-2xl overflow-hidden shadow-xl bg-slate-200 border border-slate-200 flex items-center justify-center">
+                    <span class="text-slate-400 font-medium">Placeholder for Big Photo</span>
                 </div>
             </div>
         </div>
@@ -758,7 +780,7 @@
                 "sectors-title": "Sectores que Atendemos", "sectors-subtitle": "Nuestra experiencia abarca los sectores más exigentes de la economía venezolana.", "sec-1-title": "Industria", "sec-1-desc": "Manufactura, procesamiento de alimentos, plásticos y metalmecánica.", "sec-2-title": "Comercios y Retail", "sec-2-desc": "Cadenas de supermercados, centros comerciales y grandes superficies.", "sec-3-title": "Servicios Petroleros", "sec-3-desc": "Operaciones en campo, facilidades de producción y campamentos.", "sec-4-title": "Centros de Datos", "sec-4-desc": "Redundancia energética para infraestructura crítica.", "sec-5-title": "Hoteles y Turismo", "sec-5-desc": "Confort ininterrumpido para hospitalidad de alto nivel.", "sec-6-title": "Complejos Residenciales", "sec-6-desc": "Energía confiable para comunidades residenciales modernas.",
                 "cap-title": "Capacidades Técnicas", "cap-1-title": "Ingeniería eléctrica aplicada", "cap-1-desc": "Ingeniería eléctrica aplicada a sistemas de generación.", "cap-2-title": "Grupos electrógenos diésel", "cap-2-desc": "Diseño de soluciones con grupos electrógenos diésel.", "cap-3-title": "Turbinas a gas", "cap-3-desc": "Proyectos con turbinas a gas para aplicaciones especiales.", "cap-4-title": "Transferencia automática", "cap-4-desc": "Integración con sistemas de transferencia automática.", "cap-5-title": "Salas eléctricas", "cap-5-desc": "Diseño de salas eléctricas y cuartos de máquinas.", "cap-6-title": "Ensamblaje local", "cap-6-desc": "Ensamblaje de equipos a la medida en Venezuela.",
                 "alliances-title": "Proveedores y Alianzas", "alliances-desc": "Contamos con una <span class=\"font-bold text-[#1B365D]\">red de proveedores internacionales</span> que garantizan equipos confiables y de alta calidad. Además, junto a nuestros aliados locales, tenemos la <span class=\"font-bold text-[#1B365D]\">capacidad de diseño y ensamblaje local</span> en Venezuela, adaptadas a las necesidades específicas de cada cliente.",
-                "compliance-title": "Cumplimiento Legal y Normativo", "compliance-desc": "Garantizamos que todos nuestros proyectos y operaciones cumplen estrictamente con las normativas legales, fiscales y parafiscales vigentes en Venezuela.", "comp-1": "Inscripción en el Registro Nacional de Contratistas (RNC)", "comp-2": "Solvencias Laborales y Tributarias al día", "comp-3": "Cumplimiento de normativas de seguridad industrial (INPSASEL)", "comp-iso-title": "Estándares Internacionales",
+                "compliance-title": "Cumplimiento Legal y Normativo", "compliance-desc": "Garantizamos que todos nuestros proyectos y operaciones cumplen estrictamente con las normativas legales, fiscales y parafiscales vigentes en Venezuela.", "comp-1": "Inscripción en el Registro Nacional de Contratistas (RNC)", "comp-2": "Solvencias Laborales y Tributarias al día", "comp-3": "Cumplimiento de normativas de seguridad industrial (INPSASEL)", "comp-iso-title": "Estándares Internacionales", "iso-9001-title": "ISO 9001", "iso-9001-desc": "Calidad", "iso-14001-title": "ISO 14001", "iso-14001-desc": "Ambiente", "iso-45001-title": "ISO 45001", "iso-45001-desc": "Seguridad", "iso-37001-title": "ISO 37001", "iso-37001-desc": "Antisoborno", "iso-55001-title": "ISO 55001", "iso-55001-desc": "Activos",
                 "policies-title": "Políticas Corporativas", "policies-subtitle": "En TRIC, C.A. operamos bajo los más estrictos estándares de ética, transparencia y cumplimiento normativo.", "pol-1-title": "Cumplimiento OFAC", "pol-1-desc": "Mantenemos un estricto programa de cumplimiento para asegurar que nuestras operaciones no involucren a personas o entidades sancionadas por la Oficina de Control de Activos Extranjeros (OFAC).", "pol-2-title": "Anticorrupción", "pol-2-desc": "Cero tolerancia al soborno y la corrupción. Nos regimos por políticas internas rigurosas y estándares internacionales (ISO 37001) para garantizar la integridad en todos nuestros negocios.", "pol-3-title": "Privacidad de Datos", "pol-3-desc": "Protegemos la información confidencial de nuestros clientes y socios comerciales, implementando medidas de seguridad de la información y respetando las leyes de protección de datos.",
                 "contact-title": "Contáctanos", "contact-subtitle": "¿Listo para asegurar la continuidad operativa de su empresa? Nuestro equipo de ingenieros está preparado para asesorarle.", "contact-address-title": "Ubicación", "contact-address-desc": "Av. Valmore Rodriguez, Naguanagua, Carabobo, Venezuela", "contact-email-title": "Correo Electrónico", "contact-phone-title": "Teléfono", "contact-form-title": "Envíenos un mensaje", "form-name": "Nombre / Empresa", "form-email": "Correo Electrónico", "form-msg": "Mensaje", "form-btn": "Enviar Mensaje",
                 "footer-desc": "Soluciones de Energía para un País que Necesita Autogenerar. Comprometidos con la confiabilidad operativa en Venezuela.", "footer-rights": "Todos los derechos reservados.", "footer-links-title": "Enlaces", "footer-legal-title": "Legal", "footer-legal-1": "Política de Privacidad", "footer-legal-2": "Términos de Uso"
@@ -772,7 +794,7 @@
                 "sectors-title": "Sectors We Empower", "sectors-subtitle": "Our experience covers the most demanding sectors of the Venezuelan economy.", "sec-1-title": "Industry", "sec-1-desc": "Manufacturing, food processing, plastics, and metalworking.", "sec-2-title": "Commerce and Retail", "sec-2-desc": "Supermarket chains, shopping centers, and large stores.", "sec-3-title": "Oil Services", "sec-3-desc": "Field operations, production facilities, and camps.", "sec-4-title": "Data Centers", "sec-4-desc": "Energy redundancy for critical infrastructure.", "sec-5-title": "Hotels and Tourism", "sec-5-desc": "Uninterrupted comfort for high-end hospitality.", "sec-6-title": "Residential Complexes", "sec-6-desc": "Reliable power for modern living communities.",
                 "cap-title": "Technical Capacities", "cap-1-title": "Applied electrical engineering", "cap-1-desc": "Electrical engineering applied to generation systems.", "cap-2-title": "Diesel generator sets", "cap-2-desc": "Design of solutions with diesel generator sets.", "cap-3-title": "Gas turbines", "cap-3-desc": "Projects with gas turbines for special applications.", "cap-4-title": "Automatic transfer", "cap-4-desc": "Integration with automatic transfer systems.", "cap-5-title": "Electrical rooms", "cap-5-desc": "Design of electrical rooms and machine rooms.", "cap-6-title": "Local assembly", "cap-6-desc": "Custom assembly of equipment in Venezuela.",
                 "alliances-title": "Suppliers and Alliances", "alliances-desc": "We have an <span class=\"font-bold text-[#1B365D]\">international network of suppliers</span> that guarantee reliable and high-quality equipment. In addition, together with our local allies, we have the <span class=\"font-bold text-[#1B365D]\">capacity for local design and assembly</span> in Venezuela, adapted to the specific needs of each client.",
-                "compliance-title": "Legal and Regulatory Compliance", "compliance-desc": "We guarantee that all our projects and operations strictly comply with the legal, fiscal, and parafiscal regulations in force in Venezuela.", "comp-1": "Registration in the National Registry of Contractors (RNC)", "comp-2": "Labor and Tax Solvencies up to date", "comp-3": "Compliance with industrial safety regulations (INPSASEL)", "comp-iso-title": "International Standards",
+                "compliance-title": "Legal and Regulatory Compliance", "compliance-desc": "We guarantee that all our projects and operations strictly comply with the legal, fiscal, and parafiscal regulations in force in Venezuela.", "comp-1": "Registration in the National Registry of Contractors (RNC)", "comp-2": "Labor and Tax Solvencies up to date", "comp-3": "Compliance with industrial safety regulations (INPSASEL)", "comp-iso-title": "International Standards", "iso-9001-title": "ISO 9001", "iso-9001-desc": "Quality", "iso-14001-title": "ISO 14001", "iso-14001-desc": "Environment", "iso-45001-title": "ISO 45001", "iso-45001-desc": "Safety", "iso-37001-title": "ISO 37001", "iso-37001-desc": "Anti-Bribery", "iso-55001-title": "ISO 55001", "iso-55001-desc": "Assets",
                 "policies-title": "Corporate Policies", "policies-subtitle": "At TRIC, C.A. we operate under the strictest standards of ethics, transparency, and regulatory compliance.", "pol-1-title": "OFAC Compliance", "pol-1-desc": "We maintain a strict compliance program to ensure our operations do not involve persons or entities sanctioned by the Office of Foreign Assets Control (OFAC).", "pol-2-title": "Anti-Corruption", "pol-2-desc": "Zero tolerance for bribery and corruption. We are governed by rigorous internal policies and international standards (ISO 37001) to guarantee integrity in all our business.", "pol-3-title": "Data Privacy", "pol-3-desc": "We protect the confidential information of our clients and business partners, implementing information security measures and respecting data protection laws.",
                 "contact-title": "Contact Us", "contact-subtitle": "Ready to ensure the operational continuity of your company? Our team of engineers is ready to advise you.", "contact-address-title": "Location", "contact-address-desc": "Av. Valmore Rodriguez, Naguanagua, Carabobo, Venezuela", "contact-email-title": "Email", "contact-phone-title": "Phone", "contact-form-title": "Send us a message", "form-name": "Name / Company", "form-email": "Email", "form-msg": "Message", "form-btn": "Send Message",
                 "footer-desc": "Energy Solutions for a Country that Needs to Self-Generate. Committed to operational reliability in Venezuela.", "footer-rights": "All rights reserved.", "footer-links-title": "Links", "footer-legal-title": "Legal", "footer-legal-1": "Privacy Policy", "footer-legal-2": "Terms of Use"
