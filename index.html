@@ -191,8 +191,8 @@
        
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span data-i18n="hero-title-1">Energy Solutions for a Country that</span> <br/>
-                <span class="text-[#C5A059]" data-i18n="hero-title-2">Needs to Self-Generate</span>
+                <span data-i18n="hero-title-1">Sustaining Operational Continuity for</span> <br/>
+                <span class="text-[#C5A059]" data-i18n="hero-title-2">the Venezuelan Industry</span>
             </h1>
             <p class="text-xl md:text-2xl text-slate-200 mb-10 max-w-3xl mx-auto font-light" data-i18n="hero-subtitle">Self-Generation Projects | Power Plants | Operational Reliability Projects | Venezuela.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -612,7 +612,7 @@
         </div>
         
         <!-- Marquee Container -->
-        <div class="relative w-full overflow-hidden h-16 md:h-20">
+        <div class="relative w-full overflow-hidden h-20 md:h-32 lg:h-36 flex items-center">
             <!-- Gradient Masks for smooth fade-in/out on the edges -->
             <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
             <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
@@ -651,79 +651,85 @@
     <!-- Contacto (Reveal) -->
     <section id="contact" class="py-16 md:py-20 bg-[#1B365D] text-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 md:gap-y-0">
+                
+                <!-- HEADER: Mobile Order 1, Desktop Left Column -->
+                <div class="order-1 md:col-start-1 md:col-end-2 md:mb-8">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contact-title">Contact Us</h2>
                     <div class="w-24 h-1 bg-[#C5A059] mb-8"></div>
-                    <p class="text-slate-300 mb-8 text-lg" data-i18n="contact-subtitle">Ready to ensure the operational continuity of your company? Our team of engineers is ready to advise you.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-white/10 p-3 rounded-lg">
-                                <i data-lucide="map-pin" class="w-6 h-6 text-[#C5A059]"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg" data-i18n="contact-address-title">Location</h4>
-                                <p class="text-slate-300" data-i18n="contact-address-desc">Av. Valmore Rodriguez, Naguanagua, Carabobo, Venezuela</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="bg-white/10 p-3 rounded-lg">
-                                <i data-lucide="mail" class="w-6 h-6 text-[#C5A059]"></i>
-                            </div>
-                            <div class="w-full">
-                                <h4 class="font-semibold text-lg" data-i18n="contact-email-title">Email</h4>
-                                <div class="mt-1">
-                                    <a href="mailto:info.tric@gmail.com" class="md:hidden text-slate-300 hover:text-[#C5A059] transition-colors break-all">info.tric@gmail.com</a>
-                                    <div class="hidden md:flex items-center gap-2 justify-start relative">
-                                        <span class="text-slate-300 hover:text-[#C5A059] transition-colors cursor-default break-all">info.tric@gmail.com</span>
-                                        <button onclick="copyToClipboard('info.tric@gmail.com', this)" class="p-1 text-slate-400 hover:text-[#39D87E] transition-all transform active:scale-90" title="Copy">
-                                            <i data-lucide="copy" class="w-4 h-4"></i>
-                                        </button>
-                                        <span class="copy-feedback text-[#39D87E] text-xs font-bold opacity-0 absolute left-full ml-2 whitespace-nowrap pointer-events-none" data-i18n="copy-success">Copied successfully!</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <p class="text-slate-300 text-lg" data-i18n="contact-subtitle">Ready to ensure the operational continuity of your company? Our team of engineers is ready to advise you.</p>
+                </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="bg-white/10 p-3 rounded-lg">
-                                <i data-lucide="phone" class="w-6 h-6 text-[#C5A059]"></i>
+                <!-- CONTACT FORM: Mobile Order 2, Desktop Right Column (Spanning) -->
+                <div class="order-2 md:order-none md:col-start-2 md:col-end-3 md:row-span-2">
+                    <div class="bg-white rounded-xl p-8 shadow-xl text-slate-800 h-full">
+                        <h3 class="text-2xl font-bold text-[#1B365D] mb-6" data-i18n="contact-form-title">Send us a message</h3>
+                        <form id="contact-form" action="https://formspree.io/f/mlgaebly" method="POST" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-name">Name / Company</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all">
                             </div>
                             <div>
-                                <h4 class="font-semibold text-lg" data-i18n="contact-phone-title">Phone</h4>
-                                <a href="tel:+584122205509" class="text-slate-300 hover:text-[#C5A059] transition-colors">+58 412 220 5509</a>
+                                <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-email">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all">
                             </div>
-                        </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-msg">Message</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-[#C5A059] text-[#1B365D] font-bold py-3 rounded-md hover:bg-[#C5A059]/90 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                                <span data-i18n="form-btn">Send Message</span>
+                            </button>
+                        </form>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl p-8 shadow-xl text-slate-800">
-                    <h3 class="text-2xl font-bold text-[#1B365D] mb-6" data-i18n="contact-form-title">Send us a message</h3>
-                    <form id="contact-form" action="https://formspree.io/f/mlgaebly" method="POST" class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-name">Name / Company</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all">
+                <!-- CONTACT INFO: Mobile Order 3, Desktop Left Column Below Header -->
+                <div class="order-3 md:order-none md:col-start-1 md:col-end-2 space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-white/10 p-3 rounded-lg">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-[#C5A059]"></i>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-email">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all">
+                            <h4 class="font-semibold text-lg" data-i18n="contact-address-title">Location</h4>
+                            <p class="text-slate-300" data-i18n="contact-address-desc">Av. Valmore Rodriguez, Naguanagua, Carabobo, Venezuela</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="bg-white/10 p-3 rounded-lg">
+                            <i data-lucide="mail" class="w-6 h-6 text-[#C5A059]"></i>
+                        </div>
+                        <div class="w-full">
+                            <h4 class="font-semibold text-lg" data-i18n="contact-email-title">Email</h4>
+                            <div class="mt-1">
+                                <a href="mailto:info.tric@gmail.com" class="md:hidden text-slate-300 hover:text-[#C5A059] transition-colors break-all">info.tric@gmail.com</a>
+                                <div class="hidden md:flex items-center gap-2 justify-start relative">
+                                    <span class="text-slate-300 hover:text-[#C5A059] transition-colors cursor-default break-all">info.tric@gmail.com</span>
+                                    <button onclick="copyToClipboard('info.tric@gmail.com', this)" class="p-1 text-slate-400 hover:text-[#39D87E] transition-all transform active:scale-90" title="Copy">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                    </button>
+                                    <span class="copy-feedback text-[#39D87E] text-xs font-bold opacity-0 absolute left-full ml-2 whitespace-nowrap pointer-events-none" data-i18n="copy-success">Copied successfully!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-white/10 p-3 rounded-lg">
+                            <i data-lucide="phone" class="w-6 h-6 text-[#C5A059]"></i>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-msg">Message</label>
-                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all"></textarea>
+                            <h4 class="font-semibold text-lg" data-i18n="contact-phone-title">Phone</h4>
+                            <a href="tel:+584122205509" class="text-slate-300 hover:text-[#C5A059] transition-colors">+58 412 220 5509</a>
                         </div>
-                        <button type="submit" class="w-full bg-[#C5A059] text-[#1B365D] font-bold py-3 rounded-md hover:bg-[#C5A059]/90 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
-                            <i data-lucide="send" class="w-5 h-5"></i>
-                            <span data-i18n="form-btn">Send Message</span>
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer class="bg-[#383B3E] text-slate-300 py-12 border-t border-[#383B3E]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -789,7 +795,7 @@
         const translations = {
             es: {
                 "nav-about": "Quiénes Somos", "nav-services": "Servicios", "nav-sectors": "Sectores", "nav-capacities": "Capacidades", "nav-compliance": "Cumplimiento", "nav-contact": "Contacto",
-                "hero-title-1": "Soluciones de Energía para un País que", "hero-title-2": "Necesita Autogenerar", "hero-subtitle": "Proyectos de Autogeneración | Plantas eléctricas | Proyectos de Confiabilidad Operacional | Venezuela.", "hero-btn-contact": "Contáctanos", "hero-btn-services": "Nuestros Servicios",
+                "hero-title-1": "Garantizamos la Continuidad Operativa de", "hero-title-2": "la Industria Venezolana", "hero-subtitle": "Proyectos de Autogeneración | Plantas eléctricas | Proyectos de Confiabilidad Operacional | Venezuela.", "hero-btn-contact": "Contáctanos", "hero-btn-services": "Nuestros Servicios",
                 "about-title": "Quiénes Somos", "about-p1": "<span class='font-bold text-[#1B365D]'>TRIC, C.A.</span> es una empresa venezolana legalmente constituida, dedicada al diseño, suministro, instalación y mantenimiento de sistemas de Autogeneración de energía.", "about-p2": "Nuestro enfoque combina ingeniería, experiencia operativa y una red de proveedores internacionales para ofrecer soluciones confiables y escalables.", "about-p3": "Entendemos que la realidad energética del país exige autonomía, confiabilidad operacional y capacidad de respuesta inmediata. Por eso desarrollamos soluciones de autogeneración entre <span class='font-bold text-[#1B365D]'>375 y 2500 kVA</span>.", "about-mission-title": "Nuestra Misión", "about-mission-desc": "Proveer soluciones de Autogeneración que garanticen continuidad operativa a empresas y organizaciones en Venezuela, mediante proyectos de energía confiables, eficientes y adaptados a los más altos estándares de gestión.", "about-vision-title": "Nuestra Visión", "about-vision-desc": "Ser empresa líder en soluciones de energía auxiliar y autogeneración en Venezuela, reconocida por su capacidad técnica, su compromiso con la calidad y su aporte al desarrollo industrial y comercial del país.",
                 "about-values-title": "Nuestros Valores", "val-1": "Confiabilidad", "val-2": "Creación de Valor", "val-3": "Ingeniería aplicada", "val-4": "Seguridad operativa", "val-5": "Compromiso con el cliente",
                 "services-title": "Nuestros Servicios", "services-subtitle": "Soluciones integrales de energía auxiliar y autogeneración adaptadas a las necesidades de su empresa.", "srv-1-title": "Plantas Eléctricas", "srv-1-desc": "Suministro e instalación de grupos electrógenos de alta capacidad (375 a 2500 kVA) para aplicaciones continuas o de emergencia.", "srv-2-title": "Proyectos de Autogeneración", "srv-2-desc": "Ingeniería conceptual, básica y de detalle para sistemas de generación eléctrica autónoma, sincronización y paralelismo.", "srv-3-title": "Mantenimiento Especializado", "srv-3-desc": "Planes de mantenimiento preventivo y correctivo para garantizar la máxima disponibilidad y vida útil de sus equipos.",
@@ -803,7 +809,7 @@
             },
             en: {
                 "nav-about": "About Us", "nav-services": "Services", "nav-sectors": "Sectors", "nav-capacities": "Capacities", "nav-compliance": "Compliance", "nav-contact": "Contact",
-                "hero-title-1": "Energy Solutions for a Country that", "hero-title-2": "Needs to Self-Generate", "hero-subtitle": "Self-Generation Projects | Power Plants | Operational Reliability Projects | Venezuela.", "hero-btn-contact": "Contact Us", "hero-btn-services": "Our Services",
+                "hero-title-1": "Sustaining Operational Continuity for", "hero-title-2": "the Venezuelan Industry", "hero-subtitle": "Self-Generation Projects | Power Plants | Operational Reliability Projects | Venezuela.", "hero-btn-contact": "Contact Us", "hero-btn-services": "Our Services",
                 "about-title": "About Us", "about-p1": "<span class='font-bold text-[#1B365D]'>TRIC, C.A.</span> is a legally constituted Venezuelan company, dedicated to the design, supply, installation, and maintenance of power Self-Generation systems.", "about-p2": "Our approach combines engineering, operational experience, and a network of international suppliers to offer reliable and scalable solutions.", "about-p3": "We understand that the country's energy reality demands autonomy, operational reliability, and immediate response capacity. That is why we develop self-generation solutions between <span class='font-bold text-[#1B365D]'>375 and 2500 kVA</span>.", "about-mission-title": "Our Mission", "about-mission-desc": "To provide Self-Generation solutions that guarantee operational continuity to companies and organizations in Venezuela, through reliable, efficient energy projects adapted to the highest management standards.", "about-vision-title": "Our Vision", "about-vision-desc": "To be a leading company in auxiliary energy and self-generation solutions in Venezuela, recognized for its technical capacity, commitment to quality, and contribution to the industrial and commercial development of the country.",
                 "about-values-title": "Our Values", "val-1": "Reliability", "val-2": "Value Creation", "val-3": "Applied Engineering", "val-4": "Operational Safety", "val-5": "Commitment to the Customer",
                 "services-title": "Our Services", "services-subtitle": "Comprehensive auxiliary energy and self-generation solutions tailored to your company's needs.", "srv-1-title": "Power Plants", "srv-1-desc": "Supply and installation of high-capacity generator sets (375 to 2500 kVA) for continuous or emergency applications.", "srv-2-title": "Self-Generation Projects", "srv-2-desc": "Conceptual, basic, and detailed engineering for autonomous power generation, synchronization, and paralleling systems.", "srv-3-title": "Specialized Maintenance", "srv-3-desc": "Preventive and corrective maintenance plans to guarantee maximum availability and lifespan of your equipment.",
