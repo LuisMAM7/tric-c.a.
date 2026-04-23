@@ -194,7 +194,7 @@
                 <span data-i18n="hero-title-1">Sustaining Operational Continuity for</span> <br/>
                 <span class="text-[#C5A059]" data-i18n="hero-title-2">the Venezuelan Industry</span>
             </h1>
-            <p class="text-xl md:text-2xl text-slate-200 mb-10 max-w-3xl mx-auto font-light" data-i18n="hero-subtitle">Operational Reliability Projects | Power Plants | Self-Generation Projects</p>
+            <p class="text-xl md:text-2xl text-slate-200 mb-10 max-w-3xl mx-auto font-light" data-i18n="hero-subtitle">Operational Reliability Projects | Power Plants | Self-Generation Solutions</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#contact" data-i18n="hero-btn-contact" class="bg-[#C5A059] text-[#1B365D] px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-[#C5A059]/90 transition-all transform hover:-translate-y-1 shadow-lg">Contact Us</a>
                 <a href="#services" data-i18n="hero-btn-services" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#1B365D] transition-all">Our Services</a>
@@ -489,23 +489,28 @@
         <!-- Subtle Dot Pattern Background -->
         <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px); background-size: 24px 24px;"></div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                <div class="lg:col-span-6">
+        <!-- Expanded max-width pushes the boundaries wider on desktop -->
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Removed 'items-center' and added 'items-stretch' so both columns automatically become the exact same height -->
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch py-4">
+                
+                <!-- Text Column: 5 of 12 in this wider container equals almost exactly your original 6 of 12! -->
+                <div class="lg:col-span-5 flex flex-col justify-center">
                     <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-i18n="compliance-title">Legal and Regulatory Compliance</h2>
                     <div class="w-24 h-1 bg-[#C5A059] mb-6"></div>
                     <p class="text-lg text-slate-300 mb-6" data-i18n="compliance-desc">We rigorously adapt to our clients' standards and management systems to ensure seamless operational compatibility. Our projects and operations strictly comply with the current legal regulations in force in Venezuela.</p>
                     <ul class="space-y-4 mb-10">
                         <li class="flex items-center gap-3 text-slate-200">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#C5A059]"></i>
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#C5A059] shrink-0"></i>
                             <span data-i18n="comp-1">Registration in the National Registry of Contractors (RNC)</span>
                         </li>
                         <li class="flex items-center gap-3 text-slate-200">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#C5A059]"></i>
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#C5A059] shrink-0"></i>
                             <span data-i18n="comp-2">Labor and Tax Solvencies up to date</span>
                         </li>
                         <li class="flex items-center gap-3 text-slate-200">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#C5A059]"></i>
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-[#C5A059] shrink-0"></i>
                             <span data-i18n="comp-3">Compliance with industrial safety regulations (INPSASEL)</span>
                         </li>
                     </ul>
@@ -555,7 +560,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-6 h-[400px] lg:h-full min-h-[400px] lg:min-h-full rounded-2xl overflow-hidden shadow-2xl relative mt-8 lg:mt-0">
+                
+                <!-- Image Column: 7 of 12 columns. Huge horizontal space, matched height to text -->
+                <div class="lg:col-span-7 h-[400px] lg:h-full rounded-2xl overflow-hidden shadow-2xl relative mt-8 lg:mt-0 lg:ml-6">
                     <img src="https://lh3.googleusercontent.com/d/1FUAseIgynaz5IUA45cwA9wizwq9-xYQq" alt="Cumplimiento TRIC, C.A." class="absolute inset-0 w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700">
                 </div>
             </div>
@@ -795,7 +802,7 @@
         const translations = {
             es: {
                 "nav-about": "Quiénes Somos", "nav-services": "Servicios", "nav-sectors": "Sectores", "nav-capacities": "Capacidades", "nav-compliance": "Cumplimiento", "nav-contact": "Contacto",
-                "hero-title-1": "Garantizamos la Continuidad Operativa de", "hero-title-2": "la Industria Venezolana", "hero-subtitle": "Proyectos de Confiabilidad Operacional | Plantas eléctricas | Proyectos de Autogeneración", "hero-btn-contact": "Contáctanos", "hero-btn-services": "Nuestros Servicios",
+                "hero-title-1": "Garantizamos la Continuidad Operativa de", "hero-title-2": "la Industria Venezolana", "hero-subtitle": "Proyectos de Confiabilidad Operacional | Plantas eléctricas | Soluciones de Autogeneración", "hero-btn-contact": "Contáctanos", "hero-btn-services": "Nuestros Servicios",
                 "about-title": "Quiénes Somos", "about-p1": "<span class='font-bold text-[#1B365D]'>TRIC, C.A.</span> es una empresa venezolana legalmente constituida, dedicada al diseño, suministro, instalación y mantenimiento de sistemas de Autogeneración de energía.", "about-p2": "Nuestro enfoque combina ingeniería, experiencia operativa y una red de proveedores internacionales para ofrecer soluciones confiables y escalables.", "about-p3": "Entendemos que la realidad energética del país exige autonomía, confiabilidad operacional y capacidad de respuesta inmediata. Por eso desarrollamos soluciones de autogeneración entre <span class='font-bold text-[#1B365D]'>375 y 2500 kVA</span>.", "about-mission-title": "Nuestra Misión", "about-mission-desc": "Proveer soluciones de Autogeneración que garanticen continuidad operativa a empresas y organizaciones en Venezuela, mediante proyectos de energía confiables, eficientes y adaptados a los más altos estándares de gestión.", "about-vision-title": "Nuestra Visión", "about-vision-desc": "Ser empresa líder en soluciones de energía auxiliar y autogeneración en Venezuela, reconocida por su capacidad técnica, su compromiso con la calidad y su aporte al desarrollo industrial y comercial del país.",
                 "about-values-title": "Nuestros Valores", "val-1": "Confiabilidad", "val-2": "Creación de Valor", "val-3": "Ingeniería aplicada", "val-4": "Seguridad operativa", "val-5": "Compromiso con el cliente",
                 "services-title": "Nuestros Servicios", "services-subtitle": "Soluciones integrales de energía auxiliar y autogeneración adaptadas a las necesidades de su empresa.", "srv-1-title": "Plantas Eléctricas", "srv-1-desc": "Suministro e instalación de grupos electrógenos de alta capacidad (375 a 2500 kVA) para aplicaciones continuas o de emergencia.", "srv-2-title": "Proyectos de Autogeneración", "srv-2-desc": "Ingeniería conceptual, básica y de detalle para sistemas de generación eléctrica autónoma, sincronización y paralelismo.", "srv-3-title": "Mantenimiento Especializado", "srv-3-desc": "Planes de mantenimiento preventivo y correctivo para garantizar la máxima disponibilidad y vida útil de sus equipos.",
@@ -809,7 +816,7 @@
             },
             en: {
                 "nav-about": "About Us", "nav-services": "Services", "nav-sectors": "Sectors", "nav-capacities": "Capacities", "nav-compliance": "Compliance", "nav-contact": "Contact",
-                "hero-title-1": "Sustaining Operational Continuity for", "hero-title-2": "the Venezuelan Industry", "hero-subtitle": "Operational Reliability Projects | Power Plants | Self-Generation Projects", "hero-btn-contact": "Contact Us", "hero-btn-services": "Our Services",
+                "hero-title-1": "Sustaining Operational Continuity for", "hero-title-2": "the Venezuelan Industry", "hero-subtitle": "Operational Reliability Projects | Power Plants | Self-Generation Solutions", "hero-btn-contact": "Contact Us", "hero-btn-services": "Our Services",
                 "about-title": "About Us", "about-p1": "<span class='font-bold text-[#1B365D]'>TRIC, C.A.</span> is a legally constituted Venezuelan company, dedicated to the design, supply, installation, and maintenance of power Self-Generation systems.", "about-p2": "Our approach combines engineering, operational experience, and a network of international suppliers to offer reliable and scalable solutions.", "about-p3": "We understand that the country's energy reality demands autonomy, operational reliability, and immediate response capacity. That is why we develop self-generation solutions between <span class='font-bold text-[#1B365D]'>375 and 2500 kVA</span>.", "about-mission-title": "Our Mission", "about-mission-desc": "To provide Self-Generation solutions that guarantee operational continuity to companies and organizations in Venezuela, through reliable, efficient energy projects adapted to the highest management standards.", "about-vision-title": "Our Vision", "about-vision-desc": "To be a leading company in auxiliary energy and self-generation solutions in Venezuela, recognized for its technical capacity, commitment to quality, and contribution to the industrial and commercial development of the country.",
                 "about-values-title": "Our Values", "val-1": "Reliability", "val-2": "Value Creation", "val-3": "Applied Engineering", "val-4": "Operational Safety", "val-5": "Commitment to the Customer",
                 "services-title": "Our Services", "services-subtitle": "Comprehensive auxiliary energy and self-generation solutions tailored to your company's needs.", "srv-1-title": "Power Plants", "srv-1-desc": "Supply and installation of high-capacity generator sets (375 to 2500 kVA) for continuous or emergency applications.", "srv-2-title": "Self-Generation Projects", "srv-2-desc": "Conceptual, basic, and detailed engineering for autonomous power generation, synchronization, and paralleling systems.", "srv-3-title": "Specialized Maintenance", "srv-3-desc": "Preventive and corrective maintenance plans to guarantee maximum availability and lifespan of your equipment.",
