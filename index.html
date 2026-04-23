@@ -756,8 +756,8 @@
             <div>
                 <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider" data-i18n="footer-legal-title">Legal</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" data-i18n="footer-legal-1" class="hover:text-[#C5A059] transition-colors">Privacy Policy</a></li>
-                    <li><a href="#" data-i18n="footer-legal-2" class="hover:text-[#C5A059] transition-colors">Terms of Use</a></li>
+                    <li><a href="https://drive.google.com/file/d/1VDM8Fc4_ip4mgeBZrulKVD8QS-8-nUi2/view" id="privacy-link" target="_blank" rel="noopener noreferrer" data-i18n="footer-legal-1" class="hover:text-[#C5A059] transition-colors">Privacy Policy</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Ym4kNIiNUyE4-Ff5feKx-DapfDzOHPtE/view" id="terms-link" target="_blank" rel="noopener noreferrer" data-i18n="footer-legal-2" class="hover:text-[#C5A059] transition-colors">Terms of Use</a></li>
                 </ul>
             </div>
         </div>
@@ -871,6 +871,21 @@
             const waUrl = `https://wa.me/584121371328?text=${encodeURIComponent(waMessages[lang])}`;
             if (document.getElementById('wa-floating-link')) {
                 document.getElementById('wa-floating-link').href = waUrl;
+            }
+
+            // Update Legal Documents URLs dynamically based on language
+            const privacyLink = document.getElementById('privacy-link');
+            if (privacyLink) {
+                privacyLink.href = lang === 'es' 
+                    ? 'https://drive.google.com/file/d/1Krmyo9q1r2j5cTSFed4iJfGqlQH67tCg/view' 
+                    : 'https://drive.google.com/file/d/1VDM8Fc4_ip4mgeBZrulKVD8QS-8-nUi2/view';
+            }
+            
+            const termsLink = document.getElementById('terms-link');
+            if (termsLink) {
+                termsLink.href = lang === 'es' 
+                    ? 'https://drive.google.com/file/d/1FzeyIfXyY6YWtqzcLCPoyovUEOF4G9EG/view' 
+                    : 'https://drive.google.com/file/d/1Ym4kNIiNUyE4-Ff5feKx-DapfDzOHPtE/view';
             }
         }
         
