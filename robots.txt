@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Core Sitemap
 Sitemap: https://autogeneracion.net/sitemap.xml
+Host: https://autogeneracion.net
